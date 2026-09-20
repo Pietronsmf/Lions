@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dirigentes — Governadores do Distrito LC-1</title>
+<meta name="description" content="Relação completa dos Governadores do Distrito LC-1 de Lions Clubes Internacional, de 1952 até o ano leonístico 2026/2027.">
+<meta name="theme-color" content="#00338d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/estilo.css">
+<script>try{var t=localStorage.getItem('dlc1-tema');document.documentElement.setAttribute('data-tema',t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'))}catch(e){}</script>
+</head>
+<body data-pagina="dirigentes">
+
+<div class="barra-progresso" id="barra-progresso"></div>
+<a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+<div id="cabecalho-site"></div>
+
+<main id="conteudo">
+
+  <section class="hero-pagina">
+    <div class="container hero-pagina__interno">
+      <nav class="migalhas" aria-label="Você está em">
+        <a href="index.html">Início</a><span>/</span><span>Dirigentes</span>
+      </nav>
+      <span class="sobretitulo" style="color:var(--lions-gold)">Dirigentes</span>
+      <h1>Governadores do DLC-1</h1>
+      <p>
+        Toda posição de liderança no Lions é conquistada democraticamente pelo voto e exercida
+        de forma inteiramente voluntária. Esta é a linha do tempo de quem conduziu o Berço do
+        Leonismo no Brasil desde 1952.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== GESTÃO ATUAL ===================== -->
+  <section class="secao secao--compacta">
+    <div class="container">
+      <div class="destaque revelar">
+        <div class="destaque__midia">
+          <img src="assets/img/noticias/gd-silvia-regina.png" alt="DG CaL Silvia Regina Nunes e CL Adilson">
+        </div>
+        <div class="destaque__corpo">
+          <span class="etiqueta etiqueta--ouro">Ano Leonístico <span data-ano-leonistico></span></span>
+          <h3 class="destaque__titulo">DG CaL Silvia Regina Dias Nunes e CL Adilson</h3>
+          <p class="destaque__texto">
+            "No Distrito LC-1, Berço do Leonismo no Brasil, adotamos o lema <strong>Servir com
+            Equidade</strong>, reconhecendo as diferenças, respeitando as individualidades e
+            buscando atender às necessidades de cada pessoa com justiça, dignidade e acolhimento."
+          </p>
+          <div class="grupo-botoes">
+            <a class="botao botao--primario" href="governadora.html">Ler a mensagem da Governadora</a>
+            <a class="botao botao--contorno" href="https://www.lionsclubs.org/en/discover-our-clubs/our-leaders" target="_blank" rel="noopener">Líderes internacionais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LINHA DO TEMPO ===================== -->
+  <section class="secao">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <span class="sobretitulo">Linha do tempo</span>
+        <h2>Todas as gestões, de 1952 até hoje</h2>
+        <p class="subtitulo-secao">
+          Busque por nome ou período. O Distrito registra <b data-total-governadores>76</b>
+          mandatos desde a fundação.
+        </p>
+      </div>
+
+      <div class="painel-ferramentas">
+        <label class="campo-busca">
+          <span class="visualmente-oculto">Buscar governador por nome ou período</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="busca-governadores" placeholder="Buscar por nome ou ano (ex.: Fajardo, 1998)" autocomplete="off">
+        </label>
+        <span class="contador-resultados" id="contador-governadores" role="status"></span>
+      </div>
+
+      <div class="governadores" id="lista-governadores"></div>
+    </div>
+  </section>
+
+  <!-- ===================== PIONEIRO ===================== -->
+  <section class="secao secao--escura">
+    <div class="container-estreito" style="text-align:center">
+      <span class="sobretitulo">Pioneiro</span>
+      <h2>CL Armando Fajardo</h2>
+      <p class="subtitulo-secao" style="margin-inline:auto;max-width:62ch">
+        Governador nas gestões 1952/1953 e 1953/1954, Armando Fajardo foi o grande pioneiro do
+        movimento leonístico no país e responsável pela fundação do primeiro Lions Clube
+        brasileiro, no Rio de Janeiro, em 1952. Seu nome batiza a Fundação que hoje sustenta as
+        atividades mais avançadas do Distrito.
+      </p>
+      <div class="grupo-botoes" style="justify-content:center;margin-top:2rem">
+        <a class="botao botao--ouro" href="faf.html">Fundação Armando Fajardo</a>
+        <a class="botao botao--claro" href="https://www.flumignano.com/lionscluberiodejaneiro/ARMANDO_FAJARDO_LIFE.htm" target="_blank" rel="noopener">Biografia</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<button class="voltar-topo" id="voltar-topo" type="button" aria-label="Voltar ao topo"></button>
+<div id="rodape-site"></div>
+
+<script src="assets/js/dados.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
