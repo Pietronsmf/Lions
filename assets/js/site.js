@@ -179,7 +179,7 @@
 
           <div class="rodape__base">
             <p class="rodape__expediente"><strong style="color:rgba(255,255,255,.8)">Expediente:</strong> ${inst.expediente}</p>
-            <p>#oMINIMÍDIA — Hub de Comunicação</p>
+            <p>#oMINIMÍDIA Hub de Comunicação</p>
           </div>
         </div>
       </footer>`;

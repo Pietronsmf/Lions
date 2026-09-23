@@ -19,14 +19,14 @@ const DLC1 = {
     lemaDistrital: 'Servir com Equidade',
     lemaInternacional: 'Enraizados no Servir',
     anoLeonistico: '2026 / 2027',
-    endereco: 'Rua México 11 / 1802 — Rio de Janeiro — RJ — CEP 20031-144 — Brasil',
+    endereco: 'Rua México 11 / 1802, Rio de Janeiro, RJ, CEP 20031-144, Brasil',
     telefone: '+55 (21) 2262-2198',
     whatsapp: '+55 (21) 96720-5400',
     whatsappUrl: 'https://wa.me/+552196720-5400',
     email: 'faf.lions71@gmail.com',
     facebook: 'https://www.facebook.com/search/top?q=distrito%20lc-1',
     instagram: 'https://www.instagram.com/distritolc1',
-    expediente: 'Site do DLC-1 de Lions Internacional | Operação sob concessão de direitos outorgada à FAF — Fundação Armando Fajardo de Lions Clubes. Gestão executiva sob contrato para Fator Brasil Ltda com os serviços de #oMINIMÍDIA — Hub de Comunicação. Todos os direitos reservados © 2026.'
+    expediente: 'Site do DLC-1 de Lions Internacional | Operação sob concessão de direitos outorgada à FAF, Fundação Armando Fajardo de Lions Clubes. Gestão executiva sob contrato para Fator Brasil Ltda com os serviços de #oMINIMÍDIA Hub de Comunicação. Todos os direitos reservados © 2026.'
   },
 
   /* ---------------------------------------------------------------------
@@ -57,7 +57,7 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     4. NOTÍCIAS — a mais recente vem sempre em primeiro lugar
+     4. NOTÍCIAS, a mais recente vem sempre em primeiro lugar
      categoria: Liderança | Distrito | Saúde | Inclusão | Cultura | Internacional
      --------------------------------------------------------------------- */
   noticias: [
@@ -66,7 +66,7 @@ const DLC1 = {
       destaque: true,
       categoria: 'Liderança',
       titulo: 'Formação de Líderes: inscrições abertas para o curso gratuito',
-      resumo: 'Para servir melhor, inspirar pessoas e multiplicar o impacto dos valores do Lions Clube no mundo. Um serviço do DLC-1 para todos os países de língua portuguesa. Estão abertas até 30/09/26 as inscrições para o Curso Online de Desenvolvimento de Jovens Lideranças — gratuito.',
+      resumo: 'Para servir melhor, inspirar pessoas e multiplicar o impacto dos valores do Lions Clube no mundo. Um serviço do DLC-1 para todos os países de língua portuguesa. Estão abertas até 30/09/26 as inscrições para o Curso Online de Desenvolvimento de Jovens Lideranças, gratuito.',
       imagem: 'assets/img/noticias/banner-idl-2026.jpg',
       url: 'lideranca.html',
       rotuloLink: 'Conhecer o curso'
@@ -74,7 +74,7 @@ const DLC1 = {
     {
       id: 'governadora',
       categoria: 'Distrito',
-      titulo: 'DG CaL Silvia Regina Nunes e CL Adilson — Servir com Equidade',
+      titulo: 'DG CaL Silvia Regina Nunes e CL Adilson: Servir com Equidade',
       resumo: 'A mensagem da Governadora do Ano Leonístico 2026/2027 e a apresentação do pin oficial que reúne, de forma simbólica, os valores centrais do Lions Clubs International.',
       imagem: 'assets/img/noticias/gd-silvia-regina.png',
       url: 'governadora.html',
@@ -83,7 +83,7 @@ const DLC1 = {
     {
       id: 'presidente-internacional',
       categoria: 'Internacional',
-      titulo: 'IP CL Mark S. Lyon and CaL Lyn — Rooted in Service',
+      titulo: 'IP CL Mark S. Lyon and CaL Lyn: Rooted in Service',
       resumo: 'O Presidente Internacional nos inspira com o lema "Enraizados no Servir", convidando-nos a criar raízes fortes por onde passarmos, fortalecendo o espírito de serviço, a amizade e o compromisso com nossas comunidades.',
       imagem: 'assets/img/noticias/ip-mark-lyon.png',
       url: 'https://www.lionsclubs.org/en/discover-our-clubs/our-leaders',
@@ -93,7 +93,7 @@ const DLC1 = {
       id: 'van-faf',
       categoria: 'Distrito',
       titulo: 'A Van da FAF está disponível para todos os Lions Clubes do DLC-1',
-      resumo: 'A unidade móvel atende à realização de diversos tipos de campanhas sociais — basta solicitá-la ao CL José Ronaldo Fernandes Brito.',
+      resumo: 'A unidade móvel atende à realização de diversos tipos de campanhas sociais, basta solicitá-la ao CL José Ronaldo Fernandes Brito.',
       imagem: 'assets/img/noticias/van-faf.jpg',
       url: 'faf.html',
       rotuloLink: 'Conhecer a FAF'
@@ -102,7 +102,7 @@ const DLC1 = {
       id: 'colepe',
       categoria: 'Saúde',
       titulo: '255ª Ação Social da COLEPE',
-      resumo: 'Todo último domingo do mês em Copacabana, com campanhas de saúde — diabetes, hipertensão arterial, obesidade, abuso do álcool e câncer de pele, entre outros — sob a liderança do CL Sergio Canedo e sua equipe, do LC RJ Princesa do Leme.',
+      resumo: 'Todo último domingo do mês em Copacabana, com campanhas de saúde (diabetes, hipertensão arterial, obesidade, abuso do álcool e câncer de pele, entre outros) sob a liderança do CL Sergio Canedo e sua equipe, do LC RJ Princesa do Leme.',
       imagem: 'assets/img/noticias/colepe-2026.png'
     },
     {
@@ -115,7 +115,7 @@ const DLC1 = {
     {
       id: 'ver-melhor',
       categoria: 'Saúde',
-      titulo: '6ª Ação Social — Ver Melhor',
+      titulo: '6ª Ação Social: Ver Melhor',
       resumo: 'Campanhas de exames de acuidade visual e doação de óculos, com a liderança do CL Eduardo Barbiere e sua equipe, do LC RJ Flamengo.',
       imagem: 'assets/img/noticias/ver-melhor-flamengo.png',
       url: 'clube-flamengo.html',
@@ -203,7 +203,7 @@ const DLC1 = {
     {
       nome: 'Socorro após Catástrofes',
       icone: 'escudo',
-      texto: 'Quando ocorrem desastres naturais, os Leões frequentemente são os primeiros a agir nas suas comunidades. Através da Fundação de Lions Clubs International (LCIF), fornecem itens básicos de sobrevivência — água, alimentos e abrigo — no curto prazo e apoiam a reconstrução de infraestruturas locais no longo prazo.'
+      texto: 'Quando ocorrem desastres naturais, os Leões frequentemente são os primeiros a agir nas suas comunidades. Através da Fundação de Lions Clubs International (LCIF), fornecem itens básicos de sobrevivência (água, alimentos e abrigo) no curto prazo e apoiam a reconstrução de infraestruturas locais no longo prazo.'
     },
     {
       nome: 'Esforços Humanitários',
@@ -213,7 +213,7 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     6. GOVERNADORES DO DLC-1 — do mais recente ao mais antigo
+     6. GOVERNADORES DO DLC-1, do mais recente ao mais antigo
      --------------------------------------------------------------------- */
   governadores: [
     { periodo: '2026/2027', nome: 'GD CaL Silvia Regina Dias Nunes', pagina: 'governadora.html' },
@@ -295,7 +295,7 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     7. CLUBES — tipo: lions | leo | castor
+     7. CLUBES, tipo: lions | leo | castor
      --------------------------------------------------------------------- */
   clubes: [
     /* --- LIONS CLUBES --- */
@@ -352,7 +352,7 @@ const DLC1 = {
     { nome: 'LC RJ Copacabana', tipo: 'lions' },
     { nome: 'LC RJ Corrente pelo Bem', tipo: 'lions' },
     { nome: 'LC RJ Cristo Redentor', tipo: 'lions' },
-    { nome: 'LC RJ do Rio de Janeiro — Mater Clube', tipo: 'lions' },
+    { nome: 'LC RJ do Rio de Janeiro Mater Clube', tipo: 'lions' },
     { nome: 'LC RJ Embaixadores da Alegria', tipo: 'lions' },
     { nome: 'LC RJ Engenho Velho', tipo: 'lions' },
     { nome: 'LC RJ Estácio', tipo: 'lions' },
@@ -422,23 +422,23 @@ const DLC1 = {
     { nome: 'LC Volta Redonda Santa Cecília', tipo: 'lions' },
 
     /* --- LEO CLUBES --- */
-    { nome: 'Leo Clube do Rio de Janeiro — Mater', tipo: 'leo' },
+    { nome: 'Leo Clube do Rio de Janeiro Mater', tipo: 'leo' },
     { nome: 'Leo Clube Petrópolis Itaipava', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Barra da Tijuca', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Copacabana', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Flamengo', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Ipanema', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Leme', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Princesa do Leme', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Recreio dos Bandeirantes', tipo: 'leo' },
-    { nome: 'Leo Clube RJ — Sernambetiba', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Barra da Tijuca', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Copacabana', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Flamengo', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Ipanema', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Leme', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Princesa do Leme', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Recreio dos Bandeirantes', tipo: 'leo' },
+    { nome: 'Leo Clube RJ Sernambetiba', tipo: 'leo' },
 
     /* --- CLUBES DE CASTORES --- */
     { nome: 'Bangu', tipo: 'castor' },
     { nome: 'Barra do Piraí', tipo: 'castor' },
     { nome: 'Barra Mansa', tipo: 'castor' },
-    { nome: 'Duque de Caxias — Carlos Schaefer', tipo: 'castor' },
-    { nome: 'Duque de Caxias — Jardim Primavera', tipo: 'castor' },
+    { nome: 'Duque de Caxias Carlos Schaefer', tipo: 'castor' },
+    { nome: 'Duque de Caxias Jardim Primavera', tipo: 'castor' },
     { nome: 'Flamengo', tipo: 'castor' },
     { nome: 'Gávea (Rio de Janeiro)', tipo: 'castor' },
     { nome: 'Grajaú (Rio de Janeiro)', tipo: 'castor' },
@@ -449,18 +449,18 @@ const DLC1 = {
     { nome: 'Mesquita (Nova Iguaçu)', tipo: 'castor' },
     { nome: 'Miguel Couto (Nova Iguaçu)', tipo: 'castor' },
     { nome: 'Nilópolis', tipo: 'castor' },
-    { nome: 'Nova Iguaçu — Centro', tipo: 'castor' },
-    { nome: 'Nova Iguaçu — Vila de Cava', tipo: 'castor' },
+    { nome: 'Nova Iguaçu Centro', tipo: 'castor' },
+    { nome: 'Nova Iguaçu Vila de Cava', tipo: 'castor' },
     { nome: 'Paraíba do Sul', tipo: 'castor' },
-    { nome: 'Paraíba do Sul — Centro', tipo: 'castor' },
-    { nome: 'Petrópolis — Itaipava', tipo: 'castor' },
-    { nome: 'Petrópolis — Marcos Senna', tipo: 'castor' },
-    { nome: 'Rio de Janeiro — Campo Grande', tipo: 'castor' },
-    { nome: 'Rio de Janeiro — Grajaú', tipo: 'castor' },
-    { nome: 'Rio de Janeiro — Ilha do Governador', tipo: 'castor' },
-    { nome: 'Rio de Janeiro — Méier', tipo: 'castor' },
-    { nome: 'Rio de Janeiro — Santa Cruz Eloy Silva', tipo: 'castor' },
-    { nome: 'Rio de Janeiro — São Cristóvão', tipo: 'castor' },
+    { nome: 'Paraíba do Sul Centro', tipo: 'castor' },
+    { nome: 'Petrópolis Itaipava', tipo: 'castor' },
+    { nome: 'Petrópolis Marcos Senna', tipo: 'castor' },
+    { nome: 'Rio de Janeiro Campo Grande', tipo: 'castor' },
+    { nome: 'Rio de Janeiro Grajaú', tipo: 'castor' },
+    { nome: 'Rio de Janeiro Ilha do Governador', tipo: 'castor' },
+    { nome: 'Rio de Janeiro Méier', tipo: 'castor' },
+    { nome: 'Rio de Janeiro Santa Cruz Eloy Silva', tipo: 'castor' },
+    { nome: 'Rio de Janeiro São Cristóvão', tipo: 'castor' },
     { nome: 'São João de Meriti', tipo: 'castor' },
     { nome: 'Teresópolis', tipo: 'castor' }
   ],
@@ -482,7 +482,7 @@ const DLC1 = {
     { rotulo: 'Lions Internacional', url: 'https://www.lionsclubs.org/' },
     { rotulo: 'Distrito Múltiplo LC', url: 'http://www.lions.org.br/multiplolc/' },
     { rotulo: 'Fundação Armando Fajardo', url: 'faf.html' },
-    { rotulo: 'Lions — Brasil', url: 'http://www.lions.org.br/' },
+    { rotulo: 'Lions Brasil', url: 'http://www.lions.org.br/' },
     { rotulo: 'Lions Liderança', url: 'https://lionslideranca.org.br/portal/' }
   ]
 };

@@ -1,6 +1,6 @@
 # Portal do Distrito LC-1 de Lions Clubes Internacional
 
-Recriação do site institucional do DLC-1 — site estático, sem build, sem dependências.
+Recriação do site institucional do DLC-1, site estático, sem build, sem dependências.
 Todo o conteúdo veio do site original (`lionsclubes-dlc1.org`), reorganizado em seções.
 
 ---
@@ -27,7 +27,7 @@ ou conectá-la ao Netlify, Vercel, GitHub Pages ou Cloudflare Pages. Nada a comp
 ```
 Lions/
 ├── index.html              Notícias (home)
-├── distrito.html           Somos o DLC-1 — missão, valores, estrutura
+├── distrito.html           Somos o DLC-1, missão, valores, estrutura
 ├── dirigentes.html         Governadores de 1952 até hoje (com busca)
 ├── governadora.html        Mensagem da Governadora + pin oficial
 ├── faf.html                Fundação Armando Fajardo
@@ -54,7 +54,7 @@ Lions/
 ## Como atualizar o conteúdo
 
 Quase tudo se edita em **um único arquivo**: `assets/js/dados.js`.
-Ele é um arquivo de texto comum — abra em qualquer editor, altere e salve.
+Ele é um arquivo de texto comum, abra em qualquer editor, altere e salve.
 
 ### Publicar uma notícia
 
@@ -67,8 +67,8 @@ Adicione um bloco no **início** da lista `noticias` (o primeiro aparece primeir
   titulo: 'Título da notícia',
   resumo: 'Um parágrafo descrevendo a ação, com os nomes dos companheiros envolvidos.',
   imagem: 'assets/img/noticias/arquivo.jpg', // coloque a foto nessa pasta
-  url: 'clube-flamengo.html',                // opcional — página interna ou link externo
-  rotuloLink: 'Saiba mais'                   // opcional — texto do botão
+  url: 'clube-flamengo.html',                // opcional, página interna ou link externo
+  rotuloLink: 'Saiba mais'                   // opcional, texto do botão
 },
 ```
 
@@ -87,7 +87,7 @@ Os contadores da página de clubes (117 / 10 / 29) se recalculam sozinhos.
 
 ### Registrar um novo governador
 
-No **início** da lista `governadores` — o primeiro da lista é marcado como "Gestão atual":
+No **início** da lista `governadores`, o primeiro da lista é marcado como "Gestão atual":
 
 ```js
 { periodo: '2027/2028', nome: 'GD CaL Fulana de Tal', pagina: 'governadora.html' },
@@ -95,7 +95,7 @@ No **início** da lista `governadores` — o primeiro da lista é marcado como "
 
 ### Mudar os números em destaque da home
 
-No bloco `indicadores` — os quatro números dourados abaixo do título do hero:
+No bloco `indicadores`, os quatro números dourados abaixo do título do hero:
 
 ```js
 { valor: '1952', rotulo: 'Berço do leonismo' },
@@ -115,7 +115,7 @@ usando o campo `pagina`.
 
 ## Recursos da interface
 
-- **Tema claro e escuro** — botão no cabeçalho; a escolha fica salva no navegador.
+- **Tema claro e escuro**, botão no cabeçalho; a escolha fica salva no navegador.
 - **Busca instantânea** em clubes e governadores, com tolerância a acentos
   (digitar "petropolis" encontra "Petrópolis").
 - **Filtros por categoria** nas notícias e por tipo nos clubes.
@@ -124,12 +124,12 @@ usando o campo `pagina`.
 - **Menu lateral no celular**, fecha com Esc ou toque fora.
 - **Acessibilidade**: link "pular para o conteúdo", navegação por teclado, foco visível,
   rótulos ARIA, respeito a `prefers-reduced-motion`.
-- **Impressão**: folha de estilo dedicada — as páginas de texto saem limpas no papel e em PDF.
+- **Impressão**: folha de estilo dedicada, as páginas de texto saem limpas no papel e em PDF.
 
 ---
 
 ## Créditos do conteúdo
 
 Todo o texto, as fotos e os dados são do site oficial do Distrito LC-1 de Lions Clubes
-Internacional, operado sob concessão de direitos outorgada à FAF — Fundação Armando
+Internacional, operado sob concessão de direitos outorgada à FAF, Fundação Armando
 Fajardo de Lions Clubes.
