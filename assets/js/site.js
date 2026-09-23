@@ -11,7 +11,8 @@
   /* ---------- Utilidades ---------- */
   const $ = (sel, ctx) => (ctx || document).querySelector(sel);
   const $$ = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
-  const semAcento = (t) => (t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const FAIXA_ACENTOS = new RegExp('[\u0300-\u036f]', 'g');
+  const semAcento = (t) => (t || '').normalize('NFD').replace(FAIXA_ACENTOS, '').toLowerCase();
 
   function guardar(chave, valor) {
     try { localStorage.setItem(chave, valor); } catch (e) { /* modo privado */ }
@@ -33,6 +34,11 @@
     instagram: '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>',
     telefone: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>',
     email: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>',
+    contato: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 9.3 9.3 0 01-3.3-.6L3 21l1.8-5.2A8.3 8.3 0 013.1 11 8.4 8.4 0 0111.5 3h.5a8.4 8.4 0 019 8.5z"/></svg>',
+    telefoneGrande: '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>',
+    emailGrande: '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg>',
+    whatsapp: '<svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1l-.9 1.2c-.2.2-.3.2-.6.1a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.6.3-.5v-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6l1.4.5c.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.3l-.5-.3z"/><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>',
+    local: '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10.5c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10.3" r="2.9"/></svg>',
     /* Ícones das causas globais */
     olho: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/></svg>',
     gota: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6 6.3 6 10.3a6 6 0 01-12 0c0-4 6-10.3 6-10.3z"/><path d="M9.5 13.5h5"/></svg>',
@@ -62,21 +68,10 @@
     }).join('');
 
     alvo.innerHTML = `
-      <div class="barra-topo">
-        <div class="container">
-          <span class="barra-topo__lema">${inst.lema} · ${inst.lemaDistrital}</span>
-          <div class="barra-topo__contatos">
-            <a href="tel:+552122622198">${ICONES.telefone} ${inst.telefone}</a>
-            <a href="${inst.whatsappUrl}" target="_blank" rel="noopener">${ICONES.telefone} ${inst.whatsapp}</a>
-            <a href="mailto:${inst.email}">${ICONES.email} ${inst.email}</a>
-          </div>
-        </div>
-      </div>
-
       <header class="cabecalho" id="cabecalho">
         <div class="container cabecalho__interno">
           <a class="marca" href="index.html" aria-label="Página inicial do Distrito LC-1">
-            <span class="marca__escudo" aria-hidden="true">LC1</span>
+            <img class="marca__emblema" src="assets/img/marcas/emblema-lions.png" alt="" width="150" height="146" decoding="async">
             <span class="marca__texto">
               <span class="marca__nome">Distrito LC-1</span>
               <span class="marca__desc">Lions Clubes Internacional</span>
@@ -88,6 +83,9 @@
           </nav>
 
           <div class="cabecalho__acoes">
+            <button class="botao-contato" id="abrir-contato" type="button" aria-haspopup="dialog" title="Falar com o Distrito">
+              ${ICONES.contato}<span>Contato</span>
+            </button>
             <button class="botao-icone" id="alternar-tema" type="button" aria-label="Alternar tema claro e escuro" title="Alternar tema"></button>
             <button class="botao-icone botao-menu" id="abrir-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta">${ICONES.menu}</button>
           </div>
@@ -103,15 +101,66 @@
           </div>
           <nav class="gaveta__lista" aria-label="Navegação principal (celular)">${itensGaveta}</nav>
           <div class="gaveta__rodape">
-            <strong style="display:block;color:var(--ink);margin-bottom:.4rem">Fale com o Distrito</strong>
-            <a href="${inst.whatsappUrl}" target="_blank" rel="noopener">${inst.whatsapp}</a><br>
-            <a href="mailto:${inst.email}">${inst.email}</a>
+            <button class="botao botao--primario botao--pequeno" type="button" id="abrir-contato-gaveta" style="width:100%">
+              ${ICONES.contato} Falar com o Distrito
+            </button>
           </div>
         </div>
-      </div>`;
+      </div>
+
+      <dialog class="dialogo-contato" id="dialogo-contato" aria-labelledby="titulo-contato">
+        <div class="dialogo-contato__topo">
+          <img src="assets/img/marcas/emblema-lions.png" alt="" width="150" height="146">
+          <div>
+            <h2 id="titulo-contato">Fale com o Distrito</h2>
+            <p>${inst.nome}</p>
+          </div>
+          <button class="dialogo-contato__fechar" type="button" data-fechar-contato aria-label="Fechar">${ICONES.fechar}</button>
+        </div>
+
+        <div class="dialogo-contato__corpo">
+          <a class="contato-item" href="tel:+552122622198">
+            <span class="contato-item__icone" aria-hidden="true">${ICONES.telefoneGrande}</span>
+            <span class="contato-item__texto">
+              <span class="contato-item__rotulo">Telefone</span>
+              <span class="contato-item__valor">${inst.telefone}</span>
+            </span>
+          </a>
+
+          <a class="contato-item" href="${inst.whatsappUrl}" target="_blank" rel="noopener">
+            <span class="contato-item__icone" aria-hidden="true">${ICONES.whatsapp}</span>
+            <span class="contato-item__texto">
+              <span class="contato-item__rotulo">WhatsApp</span>
+              <span class="contato-item__valor">${inst.whatsapp}</span>
+            </span>
+          </a>
+
+          <a class="contato-item" href="mailto:${inst.email}">
+            <span class="contato-item__icone" aria-hidden="true">${ICONES.emailGrande}</span>
+            <span class="contato-item__texto">
+              <span class="contato-item__rotulo">E-mail</span>
+              <span class="contato-item__valor">${inst.email}</span>
+            </span>
+          </a>
+
+          <div class="contato-item contato-item--endereco">
+            <span class="contato-item__icone" aria-hidden="true">${ICONES.local}</span>
+            <span class="contato-item__texto">
+              <span class="contato-item__rotulo">Endereço</span>
+              <span class="contato-item__valor">${inst.endereco}</span>
+            </span>
+          </div>
+
+          <div class="dialogo-contato__sociais">
+            <a href="${inst.facebook}" target="_blank" rel="noopener">${ICONES.facebook} Facebook</a>
+            <a href="${inst.instagram}" target="_blank" rel="noopener">${ICONES.instagram} Instagram</a>
+          </div>
+        </div>
+      </dialog>`;
 
     iniciarTema();
     iniciarGaveta();
+    iniciarContato();
   }
 
   /* =======================================================================
@@ -135,13 +184,9 @@
         <div class="container">
           <div class="rodape__grade">
             <div>
-              <div class="rodape__marca">
-                <span class="marca__escudo" aria-hidden="true">LC1</span>
-                <span>
-                  <b>Distrito LC-1</b>
-                  <span>${inst.lema}</span>
-                </span>
-              </div>
+              <a class="rodape__logo" href="index.html">
+                <img src="assets/img/marcas/logo-dlc1-banner.png" alt="Lions Internacional, Distrito LC-1 Brasil" width="640" height="183" loading="lazy" decoding="async">
+              </a>
               <address class="rodape__endereco">
                 ${inst.nome}<br>
                 ${inst.endereco}<br>
@@ -209,6 +254,74 @@
       aplicarTema(novo);
       guardar('dlc1-tema', novo);
     });
+  }
+
+  /* =======================================================================
+     JANELA DE CONTATOS
+     ======================================================================= */
+  function iniciarContato() {
+    const dialogo = $('#dialogo-contato');
+    if (!dialogo) return;
+
+    const nativo = typeof dialogo.showModal === 'function';
+
+    function abrir() {
+      if (nativo) {
+        dialogo.showModal();
+      } else {
+        /* Navegador sem <dialog> modal: posiciona a janela na mão */
+        dialogo.style.cssText = 'position:fixed;z-index:300;top:50%;left:50%;transform:translate(-50%,-50%);margin:0';
+        dialogo.setAttribute('open', '');
+        document.body.style.overflow = 'hidden';
+      }
+      const primeiro = $('.contato-item', dialogo);
+      if (primeiro) primeiro.focus();
+    }
+
+    function fechar() {
+      if (nativo) {
+        dialogo.close();
+      } else {
+        dialogo.removeAttribute('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    $$('#abrir-contato, #abrir-contato-gaveta').forEach((b) => {
+      b.addEventListener('click', () => {
+        const gaveta = $('#gaveta');
+        if (gaveta && gaveta.classList.contains('is-aberta')) {
+          gaveta.classList.remove('is-aberta');
+          document.body.style.overflow = '';
+        }
+        abrir();
+      });
+    });
+
+    $$('[data-fechar-contato]', dialogo).forEach((b) => b.addEventListener('click', fechar));
+
+    /* Clique fora da janela fecha */
+    dialogo.addEventListener('click', (e) => {
+      if (e.target !== dialogo) return;
+      const r = dialogo.getBoundingClientRect();
+      const fora = e.clientY < r.top || e.clientY > r.bottom || e.clientX < r.left || e.clientX > r.right;
+      if (fora) fechar();
+    });
+
+    /* Um link clicado fecha a janela */
+    $$('a', dialogo).forEach((a) => a.addEventListener('click', fechar));
+
+    /* Esc fecha, mesmo onde o comportamento nativo do <dialog> não dispara */
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      if (nativo ? dialogo.open : dialogo.hasAttribute('open')) {
+        e.preventDefault();
+        fechar();
+      }
+    });
+
+    /* Ao fechar pelo navegador, devolve a rolagem da página */
+    dialogo.addEventListener('close', () => { document.body.style.overflow = ''; });
   }
 
   /* =======================================================================
@@ -431,18 +544,6 @@
     observarRevelacao();
   }
 
-  /* =======================================================================
-     INDICADORES DO DISTRITO (home)
-     ======================================================================= */
-  function montarIndicadores() {
-    const lista = $('#lista-indicadores');
-    if (!lista) return;
-    lista.innerHTML = DLC1.indicadores.map((i) => `
-      <div class="hero__numero">
-        <b>${i.valor}</b>
-        <span>${i.rotulo}</span>
-      </div>`).join('');
-  }
 
   /* =======================================================================
      APOIADORES
@@ -450,10 +551,14 @@
   function montarApoiadores() {
     const lista = $('#lista-apoiadores');
     if (!lista) return;
-    lista.innerHTML = DLC1.apoiadores.map((a) => `
+    lista.innerHTML = DLC1.apoiadores.map((a) => {
+      /* `fundo` casa a cor do bloco com a da arte, evitando tarjas brancas */
+      const fundo = a.fundo ? ` style="background:${a.fundo}"` : '';
+      return `
       <a class="apoiador" href="${a.url}" target="_blank" rel="noopener" title="${a.nome}">
-        <img src="${a.imagem}" alt="${a.nome}" loading="lazy" decoding="async">
-      </a>`).join('');
+        <img src="${a.imagem}" alt="${a.nome}"${fundo} loading="lazy" decoding="async">
+      </a>`;
+    }).join('');
   }
 
   /* =======================================================================
@@ -565,7 +670,6 @@
     montarClubes();
     montarGovernadores();
     montarCausas();
-    montarIndicadores();
     montarApoiadores();
     montarIndice();
     preencherDinamicos();

@@ -47,17 +47,7 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     3. INDICADORES DO DISTRITO (exibidos na home)
-     --------------------------------------------------------------------- */
-  indicadores: [
-    { valor: '1952',  rotulo: 'Berço do leonismo' },
-    { valor: '121',   rotulo: 'Lions Clubes' },
-    { valor: '8',     rotulo: 'Causas globais' },
-    { valor: '100%',  rotulo: 'Das doações ao serviço' }
-  ],
-
-  /* ---------------------------------------------------------------------
-     4. NOTÍCIAS, a mais recente vem sempre em primeiro lugar
+     3. NOTÍCIAS (a mais recente vem sempre em primeiro lugar)
      categoria: Liderança | Distrito | Saúde | Inclusão | Cultura | Internacional
      --------------------------------------------------------------------- */
   noticias: [
@@ -167,7 +157,7 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     5. CAUSAS GLOBAIS DO LIONS INTERNACIONAL
+     4. CAUSAS GLOBAIS DO LIONS INTERNACIONAL
      --------------------------------------------------------------------- */
   causas: [
     {
@@ -213,7 +203,7 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     6. GOVERNADORES DO DLC-1, do mais recente ao mais antigo
+     5. GOVERNADORES DO DLC-1 (do mais recente ao mais antigo)
      --------------------------------------------------------------------- */
   governadores: [
     { periodo: '2026/2027', nome: 'GD CaL Silvia Regina Dias Nunes', pagina: 'governadora.html' },
@@ -295,7 +285,7 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     7. CLUBES, tipo: lions | leo | castor
+     6. CLUBES (tipo: lions | leo | castor)
      --------------------------------------------------------------------- */
   clubes: [
     /* --- LIONS CLUBES --- */
@@ -466,17 +456,17 @@ const DLC1 = {
   ],
 
   /* ---------------------------------------------------------------------
-     8. APOIADORES E PARCEIROS
+     7. APOIADORES E PARCEIROS
      --------------------------------------------------------------------- */
   apoiadores: [
     { nome: 'Revista Fator Brasil', imagem: 'assets/img/anuncios/fator-brasil.png', url: 'https://www.revistafatorbrasil.com.br/' },
-    { nome: 'Instituto Flumignano de Medicina', imagem: 'assets/img/anuncios/ifm.gif', url: 'https://www.medicina.flumignano.com/' },
+    { nome: 'Flumignano Instituto de Medicina', imagem: 'assets/img/anuncios/instituto-flumignano.png', url: 'https://www.medicina.flumignano.com/', fundo: '#14305c' },
     { nome: 'ESIL Imobiliária', imagem: 'assets/img/anuncios/ecil.png', url: 'https://www.esil.com.br/' },
     { nome: 'EDEL', imagem: 'assets/img/anuncios/edel.jpg', url: 'https://edel.com.br/' }
   ],
 
   /* ---------------------------------------------------------------------
-     9. LINKS INSTITUCIONAIS
+     8. LINKS INSTITUCIONAIS
      --------------------------------------------------------------------- */
   linksInstitucionais: [
     { rotulo: 'Lions Internacional', url: 'https://www.lionsclubs.org/' },
