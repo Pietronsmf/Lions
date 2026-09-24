@@ -57,7 +57,7 @@ const DLC1 = {
       categoria: 'Liderança',
       titulo: 'Formação de Líderes: inscrições abertas para o curso gratuito',
       resumo: 'Para servir melhor, inspirar pessoas e multiplicar o impacto dos valores do Lions Clube no mundo. Um serviço do DLC-1 para todos os países de língua portuguesa. Estão abertas até 30/09/26 as inscrições para o Curso Online de Desenvolvimento de Jovens Lideranças, gratuito.',
-      imagem: 'assets/img/noticias/banner-idl-2026.jpg',
+      imagem: 'assets/img/noticias/banner-idl-2026.webp',
       url: 'lideranca.html',
       rotuloLink: 'Conhecer o curso'
     },
@@ -66,7 +66,7 @@ const DLC1 = {
       categoria: 'Distrito',
       titulo: 'DG CaL Silvia Regina Nunes e CL Adilson: Servir com Equidade',
       resumo: 'A mensagem da Governadora do Ano Leonístico 2026/2027 e a apresentação do pin oficial que reúne, de forma simbólica, os valores centrais do Lions Clubs International.',
-      imagem: 'assets/img/noticias/gd-silvia-regina.png',
+      imagem: 'assets/img/noticias/gd-silvia-regina.webp',
       url: 'governadora.html',
       rotuloLink: 'Ler a mensagem'
     },
@@ -75,7 +75,7 @@ const DLC1 = {
       categoria: 'Internacional',
       titulo: 'IP CL Mark S. Lyon and CaL Lyn: Rooted in Service',
       resumo: 'O Presidente Internacional nos inspira com o lema "Enraizados no Servir", convidando-nos a criar raízes fortes por onde passarmos, fortalecendo o espírito de serviço, a amizade e o compromisso com nossas comunidades.',
-      imagem: 'assets/img/noticias/ip-mark-lyon.png',
+      imagem: 'assets/img/noticias/ip-mark-lyon.webp',
       url: 'https://www.lionsclubs.org/en/discover-our-clubs/our-leaders',
       rotuloLink: 'Lions Clubs International'
     },
@@ -84,7 +84,7 @@ const DLC1 = {
       categoria: 'Distrito',
       titulo: 'A Van da FAF está disponível para todos os Lions Clubes do DLC-1',
       resumo: 'A unidade móvel atende à realização de diversos tipos de campanhas sociais, basta solicitá-la ao CL José Ronaldo Fernandes Brito.',
-      imagem: 'assets/img/noticias/van-faf.jpg',
+      imagem: 'assets/img/noticias/van-faf.webp',
       url: 'faf.html',
       rotuloLink: 'Conhecer a FAF'
     },
@@ -93,21 +93,21 @@ const DLC1 = {
       categoria: 'Saúde',
       titulo: '255ª Ação Social da COLEPE',
       resumo: 'Todo último domingo do mês em Copacabana, com campanhas de saúde (diabetes, hipertensão arterial, obesidade, abuso do álcool e câncer de pele, entre outros) sob a liderança do CL Sergio Canedo e sua equipe, do LC RJ Princesa do Leme.',
-      imagem: 'assets/img/noticias/colepe-2026.png'
+      imagem: 'assets/img/noticias/colepe-2026.webp'
     },
     {
       id: 'sao-cristovao',
       categoria: 'Saúde',
       titulo: 'Ação Social em São Cristóvão',
       resumo: 'Campanha de prevenção do diabetes, da hipertensão arterial e da obesidade, em todos os últimos sábados do mês, com a liderança do CL José Ronaldo Fernandes e sua equipe, do LC RJ São Cristóvão.',
-      imagem: 'assets/img/noticias/sao-cristovao-2026.png'
+      imagem: 'assets/img/noticias/sao-cristovao-2026.webp'
     },
     {
       id: 'ver-melhor',
       categoria: 'Saúde',
       titulo: '6ª Ação Social: Ver Melhor',
       resumo: 'Campanhas de exames de acuidade visual e doação de óculos, com a liderança do CL Eduardo Barbiere e sua equipe, do LC RJ Flamengo.',
-      imagem: 'assets/img/noticias/ver-melhor-flamengo.png',
+      imagem: 'assets/img/noticias/ver-melhor-flamengo.webp',
       url: 'clube-flamengo.html',
       rotuloLink: 'Página do LC RJ Flamengo'
     },
@@ -116,7 +116,7 @@ const DLC1 = {
       categoria: 'Inclusão',
       titulo: 'Centro de Convivência para Pessoas com Deficiência',
       resumo: 'Inclusão, cidadania e solidariedade do LC RJ Duque de Caxias Ama Xerém, que recebeu apoio de subsídios da LCIF para atendimento social.',
-      imagem: 'assets/img/noticias/ama-xerem.gif',
+      imagem: 'assets/img/noticias/ama-xerem.webp',
       url: 'clube-ama-xerem.html',
       rotuloLink: 'Conhecer o projeto'
     },
@@ -125,7 +125,7 @@ const DLC1 = {
       categoria: 'Saúde',
       titulo: 'Ação Social do Terreirão',
       resumo: '10 Lions Clubes unidos oferecem serviços essenciais de saúde, cidadania e bem-estar, refletindo o compromisso leonístico de servir e transformar vidas.',
-      imagem: 'assets/img/noticias/terreirao-2026.gif',
+      imagem: 'assets/img/noticias/terreirao-2026.webp',
       url: 'clube-recreio.html',
       rotuloLink: 'Ver a ação completa'
     },
@@ -134,7 +134,7 @@ const DLC1 = {
       categoria: 'Saúde',
       titulo: 'Campanha do Diabetes e Prevenção do Câncer de Mama',
       resumo: 'Realizada pelo LC Petrópolis Quitandinha com apoio da equipe da Fundação Armando Fajardo.',
-      imagem: 'assets/img/noticias/quitandinha-diabetes.png',
+      imagem: 'assets/img/noticias/quitandinha-diabetes.webp',
       url: 'clube-quitandinha.html',
       rotuloLink: 'Página do clube'
     },
@@ -143,14 +143,14 @@ const DLC1 = {
       categoria: 'Cultura',
       titulo: 'Leões poéticos despertam a sensibilidade para servir',
       resumo: 'Inscrições abertas para a participação dos associados dos Lions Clubes de todo o Brasil, com a CaL Sandra Simões do LC RJ Cachambi e a CaL Fátima Soares do LC RJ Princesa do Leme.',
-      imagem: 'assets/img/noticias/leoes-poeticos-2026.png'
+      imagem: 'assets/img/noticias/leoes-poeticos-2026.webp'
     },
     {
       id: 'cultura-paz',
       categoria: 'Cultura',
       titulo: 'Fórum "Lions e a Cultura de Paz"',
       resumo: 'A Academia Brasileira de Cultura Leonística realizará, no dia 21 de setembro de 2026, às 20 horas (horário de Brasília), transmissão pelo YouTube comemorativa ao Dia Internacional da Cultura de Paz, definido pela Organização das Nações Unidas (ONU).',
-      imagem: 'assets/img/noticias/forum-cultura-paz.png',
+      imagem: 'assets/img/noticias/forum-cultura-paz.webp',
       url: 'https://www.agdl.org.br/lionsculturapazforum/',
       rotuloLink: 'Acessar o fórum'
     }
@@ -459,10 +459,10 @@ const DLC1 = {
      7. APOIADORES E PARCEIROS
      --------------------------------------------------------------------- */
   apoiadores: [
-    { nome: 'Revista Fator Brasil', imagem: 'assets/img/anuncios/fator-brasil.png', url: 'https://www.revistafatorbrasil.com.br/' },
-    { nome: 'Flumignano Instituto de Medicina', imagem: 'assets/img/anuncios/instituto-flumignano.png', url: 'https://www.medicina.flumignano.com/', fundo: '#14305c' },
-    { nome: 'ESIL Imobiliária', imagem: 'assets/img/anuncios/ecil.png', url: 'https://www.esil.com.br/' },
-    { nome: 'EDEL', imagem: 'assets/img/anuncios/edel.jpg', url: 'https://edel.com.br/' }
+    { nome: 'Revista Fator Brasil', imagem: 'assets/img/anuncios/fator-brasil.webp', url: 'https://www.revistafatorbrasil.com.br/' },
+    { nome: 'Flumignano Instituto de Medicina', imagem: 'assets/img/anuncios/instituto-flumignano.webp', url: 'https://www.medicina.flumignano.com/', fundo: '#14305c' },
+    { nome: 'ESIL Imobiliária', imagem: 'assets/img/anuncios/ecil.webp', url: 'https://www.esil.com.br/' },
+    { nome: 'EDEL', imagem: 'assets/img/anuncios/edel.webp', url: 'https://edel.com.br/' }
   ],
 
   /* ---------------------------------------------------------------------

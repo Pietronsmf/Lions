@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------------------
+# Servidores Apache (a hospedagem atual do lionsclubes-dlc1.org é Apache).
+# Os endereços do site antigo continuam valendo: cada um redireciona (301)
+# para a página nova equivalente, preservando links compartilhados e buscas.
+# ---------------------------------------------------------------------------
+ErrorDocument 404 /404.html
+
+Redirect 301 "/DIRIGENTES/DIRIGENTES.html" /dirigentes.html
+Redirect 301 "/DIRIGENTES/AL-2026-27/PAGINA_GD_Cal_SILVIA_REGINA_DIAS_NUNES_DLC1_2026-27.html" /governadora.html
+Redirect 301 "/DIRIGENTES/AL-2026-27/PAGINA_DO_GOVERNADOR_DO_DLC1_2026-27.html" /governadora.html
+Redirect 301 "/DISTRITO/DISTRITO LC-1 DE LIONS CLUBES INTERNACIONAL.html" /distrito.html
+Redirect 301 "/DISTRITO/SUBSIDIOS_DO_LIONS_INTERNACIONAL_AO_BRASIL.html" /subsidios.html
+Redirect 301 "/FAF/FUNDACAO_ARMANDO_FAJARDO_LIONS_CLUBES.html" /faf.html
+Redirect 301 "/CLUBES/LISTA_DOS_CLUBES_DLC-1.html" /clubes.html
+Redirect 301 "/CLUBES/LC_RJ_FLAMENGO/LC_RJ_FLAMENGO.html" /clube-flamengo.html
+Redirect 301 "/CLUBES/LC_DUQUE_DE_CAXIAS_AMA_XEREM/LC_DUQUE_DE_CAXIAS_AMA_XEREM.html" /clube-ama-xerem.html
+Redirect 301 "/CLUBES/LC_RJ_RECREIO_DOS_BANDEIRANTES/LC_RJ_RECREIO_DOS_BANDEIRANTES.html" /clube-recreio.html
+Redirect 301 "/CLUBES/LC_PETROPOLIS_QUITANDINHA/LC_PETROPOLIS_QUITANDINHA.html" /clube-quitandinha.html
+Redirect 301 "/CAUSAS/NOSSAS_CAUSAS_LIONS_INTERNACIONAL.html" /causas.html
+Redirect 301 "/DOE/DOE PARA OS LIONS CLUBES COM SEGURANCA.html" /doe.html
+Redirect 301 "/ALAC/ALAC-ACADEMIA_DE_LETRAS_ARTES_E_CIENCIAS_DO_DLC-1.html" /alac.html
+Redirect 301 "/EDITORIAL/EDITORIAL_19_09_26.html" /editorial.html
+Redirect 301 "/CURSO_DESENVOV_LIDERANCA/CURSO_DE_DESENVOLVIMENTO_DA_LIDERANCA.html" /lideranca.html
+
+# Cache longo para fontes, imagens e ícones; HTML sempre revalidado
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddType application/manifest+json .webmanifest

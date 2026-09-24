@@ -2,16 +2,27 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Fundação Armando Fajardo de Lions Clubes | DLC-1</title>
 <meta name="description" content="A FAF é o braço institucional de suporte aos clubes do Distrito LC-1: gestão de recursos, projetos humanitários e apoio logístico, sob auditoria do Ministério Público do Rio de Janeiro.">
-<meta name="theme-color" content="#0b47a1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c1323">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/marcas/icone-32.png">
 <link rel="apple-touch-icon" href="assets/img/marcas/icone-180.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Distrito LC-1 de Lions Clubes Internacional">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Fundação Armando Fajardo de Lions Clubes | DLC-1">
+<meta property="og:description" content="A FAF é o braço institucional de suporte aos clubes do Distrito LC-1: gestão de recursos, projetos humanitários e apoio logístico, sob auditoria do Ministério Público do Rio de Janeiro.">
+<meta property="og:image" content="https://www.lionsclubes-dlc1.org/assets/img/marcas/og-dlc1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emblema do Lions Internacional sobre azul royal, Distrito LC-1">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/estilo.css">
 <script>try{var t=localStorage.getItem('dlc1-tema');document.documentElement.setAttribute('data-tema',t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'))}catch(e){}</script>
 </head>
@@ -28,7 +39,7 @@
       <nav class="migalhas" aria-label="Você está em">
         <a href="index.html">Início</a><span>/</span><span>FAF</span>
       </nav>
-      <span class="sobretitulo" style="color:var(--lions-gold)">Fundação Armando Fajardo</span>
+      <span class="sobretitulo">Fundação Armando Fajardo</span>
       <h1>O <span class="realce">motor institucional</span> do Distrito</h1>
       <p>
         Uma homenagem ao pioneiro do movimento no Brasil e o principal braço de suporte aos
@@ -91,7 +102,7 @@
           </p>
 
           <figure>
-            <img src="assets/img/noticias/van-faf.jpg" alt="Unidade móvel da Fundação Armando Fajardo">
+            <img src="assets/img/noticias/van-faf.webp" alt="Unidade móvel da Fundação Armando Fajardo" width="1013" height="714" loading="lazy" decoding="async">
             <figcaption>
               A Van da FAF está disponível para todos os Lions Clubes do DLC-1, para a realização
               de diversos tipos de campanhas sociais, basta solicitá-la ao CL José Ronaldo
@@ -125,8 +136,7 @@
   <section class="secao secao--alt">
     <div class="container">
       <div class="cabecalho-secao">
-        <span class="sobretitulo">O que a FAF oferece aos clubes</span>
-        <h2>Apoio concreto para quem está <span class="realce">na ponta</span></h2>
+        <h2>O que a FAF oferece aos <span class="realce">clubes</span></h2>
       </div>
       <div class="grade grade--3">
         <article class="pilar revelar">
@@ -185,8 +195,8 @@
           fiscal do Brasil.
         </p>
         <div class="grupo-botoes">
-          <a class="botao botao--ouro" href="doe.html">Como doar com segurança</a>
-          <a class="botao botao--claro" href="mailto:faf.lions71@gmail.com">Falar com a FAF</a>
+          <a class="botao botao--ouro botao--com-icone" href="doe.html">Como doar com segurança <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+          <a class="link-seta" href="mailto:faf.lions71@gmail.com" data-abrir-contato>Falar com a FAF <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </div>
     </div>

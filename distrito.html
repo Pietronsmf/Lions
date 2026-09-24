@@ -2,16 +2,27 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Somos o DLC-1 | Distrito LC-1 de Lions Clubes Internacional</title>
 <meta name="description" content="A missão, os valores e a estrutura do Distrito LC-1 de Lions Clubes Internacional, o Berço do Leonismo no Brasil desde 1952.">
-<meta name="theme-color" content="#0b47a1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c1323">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/marcas/icone-32.png">
 <link rel="apple-touch-icon" href="assets/img/marcas/icone-180.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Distrito LC-1 de Lions Clubes Internacional">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Somos o DLC-1 | Distrito LC-1 de Lions Clubes Internacional">
+<meta property="og:description" content="A missão, os valores e a estrutura do Distrito LC-1 de Lions Clubes Internacional, o Berço do Leonismo no Brasil desde 1952.">
+<meta property="og:image" content="https://www.lionsclubes-dlc1.org/assets/img/marcas/og-dlc1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emblema do Lions Internacional sobre azul royal, Distrito LC-1">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/estilo.css">
 <script>try{var t=localStorage.getItem('dlc1-tema');document.documentElement.setAttribute('data-tema',t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'))}catch(e){}</script>
 </head>
@@ -28,7 +39,7 @@
       <nav class="migalhas" aria-label="Você está em">
         <a href="index.html">Início</a><span>/</span><span>Distrito</span>
       </nav>
-      <span class="sobretitulo" style="color:var(--lions-gold)">Somos o DLC-1</span>
+      <span class="sobretitulo">Somos o DLC-1</span>
       <h1>O <span class="realce">Berço do Leonismo</span> no Brasil</h1>
       <p>
         Um dos mais importantes distritos de Lions Internacional do mundo, reconhecido por ser
@@ -187,22 +198,22 @@
       <div class="grade grade--4">
         <div class="pilar">
           <span class="numero-grande">1952</span>
-          <h3 style="margin-top:.6rem">Fundação</h3>
+          <h3>Fundação</h3>
           <p>Lions Clube do Rio de Janeiro, apadrinhado pelo Clube de Leones de Montevideo.</p>
         </div>
         <div class="pilar">
           <span class="numero-grande" data-total-clubes>121</span>
-          <h3 style="margin-top:.6rem">Lions Clubes</h3>
+          <h3>Lions Clubes</h3>
           <p>Espalhados pela capital, região metropolitana, interior e serra fluminense.</p>
         </div>
         <div class="pilar">
           <span class="numero-grande" data-total-governadores>76</span>
-          <h3 style="margin-top:.6rem">Gestões registradas</h3>
+          <h3>Gestões registradas</h3>
           <p>Governadores eleitos democraticamente desde a fundação do Distrito.</p>
         </div>
         <div class="pilar">
           <span class="numero-grande">3</span>
-          <h3 style="margin-top:.6rem">Instituições</h3>
+          <h3>Instituições</h3>
           <p>FAF, Instituto de Desenvolvimento da Liderança e ALAC.</p>
         </div>
       </div>
@@ -218,8 +229,8 @@
           clubes que levam o serviço até a ponta.
         </p>
         <div class="grupo-botoes">
-          <a class="botao botao--ouro" href="dirigentes.html">Ver os dirigentes</a>
-          <a class="botao botao--claro" href="clubes.html">Lista de clubes</a>
+          <a class="botao botao--ouro botao--com-icone" href="dirigentes.html">Ver os dirigentes <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+          <a class="link-seta" href="clubes.html">Lista de clubes <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </div>
     </div>

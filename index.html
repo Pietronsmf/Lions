@@ -2,19 +2,27 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Distrito LC-1 de Lions Clubes Internacional | Notícias da corrente do bem</title>
 <meta name="description" content="Portal oficial do Distrito LC-1 de Lions Clubes Internacional, o Berço do Leonismo no Brasil. Notícias, ações sociais, clubes, causas globais e formação de líderes.">
-<meta name="theme-color" content="#0b47a1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c1323">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/marcas/icone-32.png">
 <link rel="apple-touch-icon" href="assets/img/marcas/icone-180.png">
 <link rel="manifest" href="site.webmanifest">
-<meta property="og:title" content="Distrito LC-1 de Lions Clubes Internacional">
-<meta property="og:description" content="Nós Servimos · Servir com Equidade. A corrente do bem do Berço do Leonismo no Brasil.">
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:site_name" content="Distrito LC-1 de Lions Clubes Internacional">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Distrito LC-1 de Lions Clubes Internacional | Notícias da corrente do bem">
+<meta property="og:description" content="Portal oficial do Distrito LC-1 de Lions Clubes Internacional, o Berço do Leonismo no Brasil. Notícias, ações sociais, clubes, causas globais e formação de líderes.">
+<meta property="og:image" content="https://www.lionsclubes-dlc1.org/assets/img/marcas/og-dlc1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emblema do Lions Internacional sobre azul royal, Distrito LC-1">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/estilo.css">
 <script>try{var t=localStorage.getItem('dlc1-tema');document.documentElement.setAttribute('data-tema',t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'))}catch(e){}</script>
 </head>
@@ -33,19 +41,18 @@
         <span class="hero__selo"><b>AL <span data-ano-leonistico></span></b> Berço do Leonismo no Brasil</span>
         <h1 class="hero__titulo">Nós Servimos<em>Servir com Equidade</em></h1>
         <p class="hero__texto">
-          O Distrito LC-1 é uma rede de voluntários que faz o bem sem olhar a quem. Reunimos
-          mais de uma centena de clubes no Estado do Rio de Janeiro em torno de um único
-          propósito: transformar vidas por meio do serviço humanitário.
+          Voluntários que fazem o bem sem olhar a quem, em dezenas de clubes pelo Estado do
+          Rio de Janeiro.
         </p>
         <div class="grupo-botoes">
-          <a class="botao botao--ouro" href="#noticias">Ver as notícias</a>
-          <a class="botao botao--claro" href="distrito.html">Conhecer o Distrito</a>
+          <a class="botao botao--ouro botao--com-icone" href="#noticias">Ver as notícias <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></a>
+          <a class="link-seta" href="distrito.html">Conhecer o Distrito <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </div>
 
       <div class="hero__visual">
         <figure class="hero__cartao">
-          <img src="assets/img/noticias/gd-silvia-regina.png" alt="DG CaL Silvia Regina Nunes e CL Adilson, governadoria do Distrito LC-1 no ano leonístico 2026/2027">
+          <img src="assets/img/noticias/gd-silvia-regina.webp" alt="DG CaL Silvia Regina Nunes e CL Adilson, governadoria do Distrito LC-1 no ano leonístico 2026/2027" width="640" height="640" fetchpriority="high">
           <figcaption class="hero__legenda">
             <b>DG CaL Silvia Regina Nunes e CL Adilson</b>
             Governadoria do Distrito LC-1 · Ano Leonístico <span data-ano-leonistico></span>
@@ -59,7 +66,6 @@
   <section class="secao secao--compacta">
     <div class="container">
       <div class="cabecalho-secao cabecalho-secao--centro">
-        <span class="sobretitulo">Apoiadores</span>
         <h2>Quem caminha ao <span class="realce">nosso lado</span></h2>
         <p class="subtitulo-secao">
           Empresas e instituições que sustentam a corrente do bem do Distrito LC-1.
@@ -72,28 +78,28 @@
   <!-- ===================== ACESSO RÁPIDO ===================== -->
   <section class="secao secao--compacta secao--alt">
     <div class="container">
-      <div class="grade grade--4">
-        <a class="pilar revelar" href="clubes.html">
-          <span class="pilar__icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9.5" cy="7" r="3.5"/><path d="M22 20v-2a4 4 0 00-3-3.9"/><path d="M16 3.6a4 4 0 010 7"/></svg></span>
-          <h3>Encontre um clube</h3>
-          <p>Lista completa dos Lions Clubes, Leo Clubes e Clubes de Castores do Distrito.</p>
+      <nav class="atalhos revelar" aria-label="Acesso rápido">
+        <a class="atalho" href="clubes.html">
+          <span class="atalho__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/></svg></span>
+          <h3>Encontre um clube <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></h3>
+          <p>Lions Clubes, Leo Clubes e Clubes de Castores do Distrito.</p>
         </a>
-        <a class="pilar revelar" href="doe.html">
-          <span class="pilar__icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 5.6a5 5 0 00-7.1 0L12 6.9l-1.3-1.3a5 5 0 10-7.1 7.1L12 21l8.4-8.3a5 5 0 000-7.1z"/></svg></span>
-          <h3>Doe com segurança</h3>
-          <p>100% das doações públicas vão para as ações de serviço. Veja como isso é garantido.</p>
+        <a class="atalho" href="doe.html">
+          <span class="atalho__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M230.33,141.06a24.43,24.43,0,0,0-21.24-4.23l-41.84,9.62A28,28,0,0,0,140,112H89.94a31.82,31.82,0,0,0-22.63,9.37L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9ZM164,96a36,36,0,0,0,5.9-.48,36,36,0,1,0,28.22-47A36,36,0,1,0,164,96Zm60-12a20,20,0,1,1-20-20A20,20,0,0,1,224,84ZM164,40a20,20,0,0,1,19.25,14.61,36,36,0,0,0-15,24.93A20.42,20.42,0,0,1,164,80a20,20,0,0,1,0-40Z"/></svg></span>
+          <h3>Doe com segurança <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></h3>
+          <p>100% das doações públicas vão para as ações de serviço.</p>
         </a>
-        <a class="pilar revelar" href="lideranca.html">
-          <span class="pilar__icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2.5 8 12 13l9.5-5z"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg></span>
-          <h3>Formação de líderes</h3>
-          <p>Cursos gratuitos de desenvolvimento da liderança para todos os países de língua portuguesa.</p>
+        <a class="atalho" href="lideranca.html">
+          <span class="atalho__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></svg></span>
+          <h3>Formação de líderes <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></h3>
+          <p>Cursos gratuitos para todos os países de língua portuguesa.</p>
         </a>
-        <a class="pilar revelar" href="subsidios.html">
-          <span class="pilar__icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5v19"/><path d="M17 6.5H9.6a3.1 3.1 0 000 6.2h4.8a3.1 3.1 0 010 6.3H6"/></svg></span>
-          <h3>Subsídios da LCIF</h3>
-          <p>Como o seu clube pode acessar recursos internacionais para projetos humanitários.</p>
+        <a class="atalho" href="subsidios.html">
+          <span class="atalho__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm88,104a87.62,87.62,0,0,1-6.4,32.94l-44.7-27.49a15.92,15.92,0,0,0-6.24-2.23l-22.82-3.08a16.11,16.11,0,0,0-16,7.86h-8.72l-3.8-7.86a15.91,15.91,0,0,0-11-8.67l-8-1.73L96.14,104h16.71a16.06,16.06,0,0,0,7.73-2l12.25-6.76a16.62,16.62,0,0,0,3-2.14l26.91-24.34A15.93,15.93,0,0,0,166,49.1l-.36-.65A88.11,88.11,0,0,1,216,128ZM143.31,41.34,152,56.9,125.09,81.24,112.85,88H96.14a16,16,0,0,0-13.88,8l-8.73,15.23L63.38,84.19,74.32,58.32a87.87,87.87,0,0,1,69-17ZM40,128a87.53,87.53,0,0,1,8.54-37.8l11.34,30.27a16,16,0,0,0,11.62,10l21.43,4.61L96.74,143a16.09,16.09,0,0,0,14.4,9h1.48l-7.23,16.23a16,16,0,0,0,2.86,17.37l.14.14L128,205.94l-1.94,10A88.11,88.11,0,0,1,40,128Zm102.58,86.78,1.13-5.81a16.09,16.09,0,0,0-4-13.9,1.85,1.85,0,0,1-.14-.14L120,174.74,133.7,144l22.82,3.08,45.72,28.12A88.18,88.18,0,0,1,142.58,214.78Z"/></svg></span>
+          <h3>Subsídios da LCIF <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></h3>
+          <p>Como o seu clube acessa recursos internacionais.</p>
         </a>
-      </div>
+      </nav>
     </div>
   </section>
 
@@ -101,7 +107,6 @@
   <section class="secao" id="noticias">
     <div class="container">
       <div class="cabecalho-secao">
-        <span class="sobretitulo">Notícias</span>
         <h2>A <span class="realce">corrente do bem</span> em movimento</h2>
         <p class="subtitulo-secao">
           Cada publicação aqui é uma ação real, com nome, rosto e comunidade. Filtre por tema
@@ -123,7 +128,7 @@
     <div class="container">
       <div class="destaque revelar">
         <div class="destaque__midia">
-          <img src="assets/img/noticias/van-faf.jpg" alt="Unidade móvel da Fundação Armando Fajardo utilizada nas campanhas sociais">
+          <img src="assets/img/noticias/van-faf.webp" alt="Unidade móvel da Fundação Armando Fajardo utilizada nas campanhas sociais" width="1013" height="714" loading="lazy" decoding="async">
         </div>
         <div class="destaque__corpo">
           <span class="etiqueta etiqueta--ouro">Fundação Armando Fajardo</span>
@@ -135,7 +140,7 @@
           </p>
           <div class="grupo-botoes">
             <a class="botao botao--primario" href="faf.html">Conhecer a FAF</a>
-            <a class="botao botao--contorno" href="doe.html">Como doar</a>
+            <a class="link-seta" href="doe.html">Como doar <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
           </div>
         </div>
       </div>
@@ -154,8 +159,9 @@
           críticos da humanidade.
         </p>
       </div>
-      <div style="display:flex;justify-content:center">
-        <a class="botao botao--ouro" href="causas.html">Ver as oito causas</a>
+      <ul class="faixa-causas" id="faixa-causas" aria-label="As oito causas globais"></ul>
+      <div class="acoes-centro">
+        <a class="botao botao--ouro botao--com-icone" href="causas.html">Ver as oito causas <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
       </div>
     </div>
   </section>
@@ -171,8 +177,8 @@
         </p>
         <cite>MJF CL Izidoro Flumignan, Editorial do portal</cite>
       </div>
-      <div style="display:flex;justify-content:center;margin-top:2rem">
-        <a class="botao botao--contorno" href="editorial.html">Ler o editorial completo</a>
+      <div class="acoes-centro acoes-depois">
+        <a class="link-seta" href="editorial.html">Ler o editorial completo <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
       </div>
     </div>
   </section>
@@ -181,15 +187,14 @@
   <section class="secao">
     <div class="container">
       <div class="chamada revelar">
-        <span class="sobretitulo" style="color:var(--lions-gold)">Faça parte</span>
         <h2>Existe, sim, gente que se interessa pelo outro <span class="realce">sem pensar em si</span></h2>
         <p>
           Ser Leão é carregar um selo de caráter, liderança e compromisso inabalável com o
           próximo. Converse com o Distrito e descubra o clube mais próximo de você.
         </p>
         <div class="grupo-botoes">
-          <a class="botao botao--ouro" href="clubes.html">Encontrar um clube</a>
-          <a class="botao botao--claro" href="mailto:faf.lions71@gmail.com">Falar com o Distrito</a>
+          <a class="botao botao--ouro botao--com-icone" href="clubes.html">Encontrar um clube <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+          <a class="link-seta" href="mailto:faf.lions71@gmail.com" data-abrir-contato>Falar com o Distrito <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </div>
     </div>

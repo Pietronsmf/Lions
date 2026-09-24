@@ -20,6 +20,14 @@ npx serve .
 É um site 100% estático: basta enviar a pasta inteira por FTP para a hospedagem,
 ou conectá-la ao Netlify, Vercel, GitHub Pages ou Cloudflare Pages. Nada a compilar.
 
+- **Endereços antigos continuam funcionando.** O `.htaccess` (Apache, a hospedagem atual)
+  e o `_redirects` (Netlify/Cloudflare) redirecionam as 16 páginas do site anterior, como
+  `/FAF/FUNDACAO_ARMANDO_FAJARDO_LIONS_CLUBES.html`, para as novas. Links já compartilhados
+  e resultados do Google não quebram. No GitHub Pages esses arquivos não têm efeito.
+- **Imagem de compartilhamento** (WhatsApp, Facebook): `assets/img/marcas/og-dlc1.jpg`,
+  referenciada com o endereço completo `https://www.lionsclubes-dlc1.org/...`. Se o site for
+  publicado em outro domínio, troque esse endereço nas páginas (busque por `og:image`).
+
 ---
 
 ## Estrutura
@@ -42,11 +50,16 @@ Lions/
 ├── clube-ama-xerem.html    │ Páginas de clubes
 ├── clube-recreio.html      │
 ├── clube-quitandinha.html  ┘
+├── 404.html                Página de erro com a marca
+├── .htaccess               Redirecionamentos 301 do site antigo (Apache) e cache
+├── _redirects              Os mesmos redirecionamentos para Netlify/Cloudflare
+├── favicon.ico, site.webmanifest
 └── assets/
-    ├── css/estilo.css      Design system completo (tokens, componentes, temas)
+    ├── css/estilo.css      Design system (tokens, componentes, temas)
     ├── js/dados.js         ★ TODO O CONTEÚDO EDITÁVEL
     ├── js/site.js          Montagem da interface e interações
-    └── img/                Imagens do site original
+    ├── fonts/              Plus Jakarta Sans e Source Serif 4 (auto-hospedadas)
+    └── img/                Fotos em WebP, logos e ícones
 ```
 
 ---
@@ -66,7 +79,7 @@ Adicione um bloco no **início** da lista `noticias` (o primeiro aparece primeir
   categoria: 'Saúde',                       // Saúde | Liderança | Distrito | Inclusão | Cultura | Internacional
   titulo: 'Título da notícia',
   resumo: 'Um parágrafo descrevendo a ação, com os nomes dos companheiros envolvidos.',
-  imagem: 'assets/img/noticias/arquivo.jpg', // coloque a foto nessa pasta
+  imagem: 'assets/img/noticias/arquivo.webp', // coloque a foto nessa pasta (de preferência WebP)
   url: 'clube-flamengo.html',                // opcional, página interna ou link externo
   rotuloLink: 'Saiba mais'                   // opcional, texto do botão
 },
@@ -122,20 +135,37 @@ usando o campo `pagina`.
 O site segue o padrão das artes do Instagram [@distritolc1](https://www.instagram.com/distritolc1):
 
 - **Azul royal** `#0b47a1` como base, com brilho `#1557c4` no centro e `#062a63` nas bordas.
-- **Ouro quente** `#ffc20e` para os acentos.
+- **Ouro quente** `#ffc20e` como única cor de destaque. Para texto pequeno sobre azul usa-se
+  `#ffd54f`, que mantém contraste AA mesmo no ponto mais claro do gradiente.
 - **Sol de raios** (`assets/img/marcas/raios-sol.svg`) surgindo dos cantos das faixas azuis,
-  a assinatura gráfica da gestão 2026/27. As posições e tamanhos ficam na propriedade
-  `background` de `.hero`, `.hero-pagina`, `.secao--escura`, `.chamada` e `.destaque-citacao`.
-- **Palavra-chave destacada** dentro do título: basta envolver o trecho em
-  `<span class="realce">…</span>`. Fica dourado sobre azul e azul sobre fundo claro.
+  sempre do lado oposto ao texto. Um grão finíssimo tira o aspecto de gradiente digital.
+- **Palavra-chave destacada** no título: envolva o trecho em `<span class="realce">…</span>`.
 - **Régua dourada** sob os títulos de seção, aplicada automaticamente.
-- **Favicon e ícone de app** gerados do emblema oficial do Lions:
-  `favicon.ico` (16/32/48), `icone-32.png`, `icone-180.png` para iOS e
-  `icone-192/512.png` no `site.webmanifest`, que permite instalar o portal
-  na tela inicial do celular.
-- **Véu azul** sobre as fotos das notícias, que some ao passar o mouse, para a grade
-  ler como o feed sem esconder as fotos das ações.
-- **Etiqueta e botão de seta dourados** nos cartões.
+
+### Regras do sistema
+
+Estão escritas no topo de `assets/css/estilo.css`. Em resumo:
+
+- **Tipografia**: Plus Jakarta Sans em títulos e interface; Source Serif 4 só nos textos
+  longos. As duas ficam em `assets/fonts`, sem requisição ao Google (mais rápido e sem
+  enviar o IP do visitante a terceiros).
+- **Formas**: botões, chips e busca em pílula; etiquetas com 6px; cartões com 20px;
+  blocos de destaque com 28px.
+- **Ações**: a ação principal de cada bloco é um botão; a secundária é um link com seta
+  (`.link-seta`). O botão dourado leva a seta num círculo próprio (`.botao--com-icone`).
+- **Rótulos acima dos títulos** (`.sobretitulo`): no máximo um a cada três seções. O do topo
+  de cada página identifica a página; nas seções, o próprio título deve bastar.
+- **Ícones**: [Phosphor](https://phosphoricons.com), estilo regular (licença MIT). Para um
+  ícone novo, baixe o SVG de `cdn.jsdelivr.net/npm/@phosphor-icons/core@2/assets/regular/`.
+- **Movimento**: só `transform` e `opacity`; toque responde no `:active`; hover só existe
+  em dispositivos com mouse. Com "reduzir movimento" ligado, os deslocamentos somem e ficam
+  apenas as transições de opacidade.
+
+### Manchete das notícias
+
+A primeira notícia de `dados.js` com `destaque: true` ocupa a linha inteira da grade, em
+layout horizontal no computador. A área da imagem fica perto de 2:1, então banners com
+texto não são cortados.
 
 ## Versão mobile
 

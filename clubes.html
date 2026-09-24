@@ -2,16 +2,27 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Clubes do DLC-1 | Lions, Leo e Castores</title>
 <meta name="description" content="Lista dos Lions Clubes, Leo Clubes e Clubes de Castores do Distrito LC-1, com busca por nome e filtro por categoria.">
-<meta name="theme-color" content="#0b47a1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c1323">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/marcas/icone-32.png">
 <link rel="apple-touch-icon" href="assets/img/marcas/icone-180.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Distrito LC-1 de Lions Clubes Internacional">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Clubes do DLC-1 | Lions, Leo e Castores">
+<meta property="og:description" content="Lista dos Lions Clubes, Leo Clubes e Clubes de Castores do Distrito LC-1, com busca por nome e filtro por categoria.">
+<meta property="og:image" content="https://www.lionsclubes-dlc1.org/assets/img/marcas/og-dlc1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emblema do Lions Internacional sobre azul royal, Distrito LC-1">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/estilo.css">
 <script>try{var t=localStorage.getItem('dlc1-tema');document.documentElement.setAttribute('data-tema',t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'))}catch(e){}</script>
 </head>
@@ -28,7 +39,7 @@
       <nav class="migalhas" aria-label="Você está em">
         <a href="index.html">Início</a><span>/</span><span>Clubes</span>
       </nav>
-      <span class="sobretitulo" style="color:var(--lions-gold)">Clubes do LC-1</span>
+      <span class="sobretitulo">Clubes do LC-1</span>
       <h1>Encontre o <span class="realce">seu clube</span></h1>
       <p>
         Lista histórica em ordem alfabética, em processo de levantamento dos dados. Nem todos os
@@ -43,17 +54,17 @@
       <div class="grade grade--3">
         <div class="pilar">
           <span class="numero-grande" data-total-clubes>121</span>
-          <h3 style="margin-top:.6rem">Lions Clubes</h3>
+          <h3>Lions Clubes</h3>
           <p>Da capital à região serrana, passando pela Baixada, Sul Fluminense e Costa Verde.</p>
         </div>
         <div class="pilar">
           <span class="numero-grande" data-total-leo>10</span>
-          <h3 style="margin-top:.6rem">Leo Clubes</h3>
+          <h3>Leo Clubes</h3>
           <p>Juventude em formação para a liderança e o serviço comunitário.</p>
         </div>
         <div class="pilar">
           <span class="numero-grande" data-total-castores>29</span>
-          <h3 style="margin-top:.6rem">Clubes de Castores</h3>
+          <h3>Clubes de Castores</h3>
           <p>A porta de entrada das crianças no universo do voluntariado leonístico.</p>
         </div>
       </div>
@@ -64,7 +75,6 @@
   <section class="secao">
     <div class="container">
       <div class="cabecalho-secao">
-        <span class="sobretitulo">Diretório</span>
         <h2>Lions Clubes, Leo Clubes e Clubes de Castores</h2>
         <p class="subtitulo-secao">
           Use a busca para localizar um clube pelo nome ou pelo bairro e município. Os clubes que
@@ -75,7 +85,7 @@
       <div class="painel-ferramentas">
         <label class="campo-busca">
           <span class="visualmente-oculto">Buscar clube pelo nome</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>
           <input type="search" id="busca-clubes" placeholder="Buscar clube (ex.: Flamengo, Petrópolis, Nova Iguaçu)" autocomplete="off">
         </label>
         <div class="chips" id="filtros-clubes" role="group" aria-label="Filtrar por categoria de clube">
@@ -95,7 +105,6 @@
   <section class="secao secao--alt">
     <div class="container">
       <div class="cabecalho-secao">
-        <span class="sobretitulo">Páginas de clubes</span>
         <h2>Cada clube tem sua <span class="realce">vitrine no portal</span></h2>
         <p class="subtitulo-secao">
           Cada Lions Clube do DLC-1 ganhou, gratuitamente, uma página própria dentro da
@@ -104,28 +113,28 @@
       </div>
       <div class="grade grade--4">
         <a class="cartao revelar" href="clube-flamengo.html">
-          <div class="cartao__midia"><img src="assets/img/noticias/ver-melhor-flamengo.png" alt="Ação Ver Melhor do LC RJ Flamengo" loading="lazy"></div>
+          <div class="cartao__midia"><img src="assets/img/noticias/ver-melhor-flamengo.webp" alt="Ação Ver Melhor do LC RJ Flamengo" loading="lazy" width="720" height="720"></div>
           <div class="cartao__corpo">
             <h3 class="cartao__titulo">LC RJ Flamengo</h3>
             <p class="cartao__texto">Ver Bem e Aprender Melhor: saúde oftalmológica e prevenção.</p>
           </div>
         </a>
         <a class="cartao revelar" href="clube-ama-xerem.html">
-          <div class="cartao__midia"><img src="assets/img/noticias/ama-xerem.gif" alt="Centro de Convivência de Xerém" loading="lazy"></div>
+          <div class="cartao__midia"><img src="assets/img/noticias/ama-xerem.webp" alt="Centro de Convivência de Xerém" loading="lazy" width="1170" height="828"></div>
           <div class="cartao__corpo">
             <h3 class="cartao__titulo">LC Duque de Caxias Ama Xerém</h3>
             <p class="cartao__texto">Centro de Convivência para Pessoas com Deficiência.</p>
           </div>
         </a>
         <a class="cartao revelar" href="clube-recreio.html">
-          <div class="cartao__midia"><img src="assets/img/noticias/terreirao-2026.gif" alt="Ação Social do Terreirão" loading="lazy"></div>
+          <div class="cartao__midia"><img src="assets/img/noticias/terreirao-2026.webp" alt="Ação Social do Terreirão" loading="lazy" width="1170" height="828"></div>
           <div class="cartao__corpo">
             <h3 class="cartao__titulo">LC RJ Recreio dos Bandeirantes</h3>
             <p class="cartao__texto">Ação Social do Terreirão, com 10 clubes unidos.</p>
           </div>
         </a>
         <a class="cartao revelar" href="clube-quitandinha.html">
-          <div class="cartao__midia"><img src="assets/img/noticias/quitandinha-diabetes.png" alt="Campanha do diabetes em Petrópolis" loading="lazy"></div>
+          <div class="cartao__midia"><img src="assets/img/noticias/quitandinha-diabetes.webp" alt="Campanha do diabetes em Petrópolis" loading="lazy" width="1141" height="1141"></div>
           <div class="cartao__corpo">
             <h3 class="cartao__titulo">LC Petrópolis Quitandinha</h3>
             <p class="cartao__texto">Diabetes e prevenção do câncer de mama na região serrana.</p>
@@ -144,8 +153,8 @@
           informações e as fotos da sua ação social para a equipe do portal.
         </p>
         <div class="grupo-botoes">
-          <a class="botao botao--ouro" href="mailto:faf.lions71@gmail.com?subject=P%C3%A1gina%20do%20meu%20clube%20no%20portal%20DLC-1">Solicitar por e-mail</a>
-          <a class="botao botao--claro" href="https://wa.me/+552196720-5400" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="botao botao--ouro botao--com-icone" href="mailto:faf.lions71@gmail.com?subject=P%C3%A1gina%20do%20meu%20clube%20no%20portal%20DLC-1">Solicitar por e-mail <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+          <a class="link-seta" href="https://wa.me/+552196720-5400" target="_blank" rel="noopener">Falar no WhatsApp <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
         </div>
       </div>
     </div>

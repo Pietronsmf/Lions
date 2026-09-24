@@ -2,16 +2,27 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Causas Globais do Lions Internacional | DLC-1</title>
 <meta name="description" content="As oito causas globais do Lions Clubs International: visão, diabetes, fome, meio ambiente, câncer infantil, juventude, socorro após catástrofes e esforços humanitários.">
-<meta name="theme-color" content="#0b47a1">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c1323">
+<meta name="color-scheme" content="light dark">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/marcas/icone-32.png">
 <link rel="apple-touch-icon" href="assets/img/marcas/icone-180.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Distrito LC-1 de Lions Clubes Internacional">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Causas Globais do Lions Internacional | DLC-1">
+<meta property="og:description" content="As oito causas globais do Lions Clubs International: visão, diabetes, fome, meio ambiente, câncer infantil, juventude, socorro após catástrofes e esforços humanitários.">
+<meta property="og:image" content="https://www.lionsclubes-dlc1.org/assets/img/marcas/og-dlc1.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emblema do Lions Internacional sobre azul royal, Distrito LC-1">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/estilo.css">
 <script>try{var t=localStorage.getItem('dlc1-tema');document.documentElement.setAttribute('data-tema',t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'))}catch(e){}</script>
 </head>
@@ -28,7 +39,7 @@
       <nav class="migalhas" aria-label="Você está em">
         <a href="index.html">Início</a><span>/</span><span>Causas</span>
       </nav>
-      <span class="sobretitulo" style="color:var(--lions-gold)">Causas globais</span>
+      <span class="sobretitulo">Causas globais</span>
       <h1>Oito causas, <span class="realce">milhões de pessoas</span> mobilizadas</h1>
       <p>
         O Lions Clubs International direciona sua força de serviço voluntário mundial através de
@@ -46,15 +57,14 @@
   </section>
 
   <section class="secao secao--escura">
-    <div class="container-estreito" style="text-align:center">
-      <span class="sobretitulo">Na prática diária</span>
-      <h2 style="max-width:22ch;margin-inline:auto">Essa atuação global unificada reflete o lema histórico e permanente da associação</h2>
-      <p class="subtitulo-secao" style="font-size:var(--fs-lg);font-family:var(--font-display);font-weight:700;color:var(--lions-gold);margin-top:1.4rem">
+    <div class="container-estreito texto-centro">
+      <h2 class="titulo-estreito">Essa atuação global unificada reflete o lema histórico e permanente da associação</h2>
+      <p class="lema-destaque">
         "Nós Servimos"
       </p>
-      <div class="grupo-botoes" style="justify-content:center;margin-top:2rem">
-        <a class="botao botao--ouro" href="https://www.lionsclubs.org/pt/our-impact/our-service/our-global-impact" target="_blank" rel="noopener">Ver o impacto global</a>
-        <a class="botao botao--claro" href="index.html#noticias">Ações do DLC-1</a>
+      <div class="grupo-botoes acoes-centro acoes-depois">
+        <a class="botao botao--ouro botao--com-icone" href="https://www.lionsclubs.org/pt/our-impact/our-service/our-global-impact" target="_blank" rel="noopener">Ver o impacto global <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span></a>
+        <a class="link-seta" href="index.html#noticias">Ações do DLC-1 <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
       </div>
     </div>
   </section>
@@ -63,7 +73,6 @@
   <section class="secao">
     <div class="container">
       <div class="cabecalho-secao">
-        <span class="sobretitulo">No Distrito LC-1</span>
         <h2>Como as causas globais viram <span class="realce">ação local</span></h2>
         <p class="subtitulo-secao">
           Cada campanha do Distrito nasce alinhada a uma das causas globais, é isso que permite
@@ -73,7 +82,7 @@
       <div class="grade grade--3">
         <article class="cartao revelar">
           <div class="cartao__midia">
-            <img src="assets/img/noticias/ver-melhor-flamengo.png" alt="Campanha de acuidade visual" loading="lazy">
+            <img src="assets/img/noticias/ver-melhor-flamengo.webp" alt="Campanha de acuidade visual" loading="lazy" width="720" height="720">
             <span class="etiqueta">Visão</span>
           </div>
           <div class="cartao__corpo">
@@ -87,7 +96,7 @@
         </article>
         <article class="cartao revelar">
           <div class="cartao__midia">
-            <img src="assets/img/noticias/colepe-2026.png" alt="Ação social da COLEPE em Copacabana" loading="lazy">
+            <img src="assets/img/noticias/colepe-2026.webp" alt="Ação social da COLEPE em Copacabana" loading="lazy" width="564" height="336">
             <span class="etiqueta etiqueta--saude">Diabetes</span>
           </div>
           <div class="cartao__corpo">
@@ -101,7 +110,7 @@
         </article>
         <article class="cartao revelar">
           <div class="cartao__midia">
-            <img src="assets/img/noticias/ama-xerem.gif" alt="Centro de Convivência de Xerém" loading="lazy">
+            <img src="assets/img/noticias/ama-xerem.webp" alt="Centro de Convivência de Xerém" loading="lazy" width="1170" height="828">
             <span class="etiqueta etiqueta--ouro">Humanitário</span>
           </div>
           <div class="cartao__corpo">
@@ -126,8 +135,8 @@
           da LCIF. Veja o passo a passo completo do processo.
         </p>
         <div class="grupo-botoes">
-          <a class="botao botao--ouro" href="subsidios.html">Como solicitar subsídios</a>
-          <a class="botao botao--claro" href="doe.html">Apoiar as causas</a>
+          <a class="botao botao--ouro botao--com-icone" href="subsidios.html">Como solicitar subsídios <span class="botao__icone"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span></a>
+          <a class="link-seta" href="doe.html">Apoiar as causas <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
         </div>
       </div>
     </div>
