@@ -26,6 +26,12 @@ const DLC1 = {
     email: 'faf.lions71@gmail.com',
     facebook: 'https://www.facebook.com/search/top?q=distrito%20lc-1',
     instagram: 'https://www.instagram.com/distritolc1',
+    /* canal de pauta: clubes enviam suas ações para publicação */
+    envieNoticia: {
+      email: 'ominimidia@gmail.com',
+      whatsapp: '(21) 9-9589-6609',
+      whatsappUrl: 'https://wa.me/5521995896609'
+    },
     expediente: 'Site do DLC-1 de Lions Internacional | Operação sob concessão de direitos outorgada à FAF, Fundação Armando Fajardo de Lions Clubes. Gestão executiva sob contrato para Fator Brasil Ltda com os serviços de #oMINIMÍDIA Hub de Comunicação. Todos os direitos reservados © 2026.'
   },
 
@@ -33,7 +39,7 @@ const DLC1 = {
      2. MENU PRINCIPAL
      --------------------------------------------------------------------- */
   menu: [
-    { id: 'noticias',   rotulo: 'Notícias',   url: 'index.html',      descricao: 'A corrente do bem' },
+    { id: 'noticias',   rotulo: 'Notícias',   url: 'index.html',      descricao: 'A corrente da bondade' },
     { id: 'distrito',   rotulo: 'Distrito',   url: 'distrito.html',   descricao: 'Quem somos' },
     { id: 'dirigentes', rotulo: 'Dirigentes', url: 'dirigentes.html', descricao: 'Governadoria e história' },
     { id: 'faf',        rotulo: 'FAF',        url: 'faf.html',        descricao: 'Fundação Armando Fajardo' },
@@ -58,6 +64,7 @@ const DLC1 = {
       titulo: 'Formação de Líderes: inscrições abertas para o curso gratuito',
       resumo: 'Para servir melhor, inspirar pessoas e multiplicar o impacto dos valores do Lions Clube no mundo. Um serviço do DLC-1 para todos os países de língua portuguesa. Estão abertas até 30/09/26 as inscrições para o Curso Online de Desenvolvimento de Jovens Lideranças, gratuito.',
       imagem: 'assets/img/noticias/banner-idl-2026.webp',
+      ajuste: 'conter', fundo: '#ffffff',
       url: 'lideranca.html',
       rotuloLink: 'Conhecer o curso'
     },
@@ -78,6 +85,23 @@ const DLC1 = {
       imagem: 'assets/img/noticias/ip-mark-lyon.webp',
       url: 'https://www.lionsclubs.org/en/discover-our-clubs/our-leaders',
       rotuloLink: 'Lions Clubs International'
+    },
+    {
+      id: 'ip-chegada-rio',
+      categoria: 'Internacional',
+      titulo: 'IP CL Mark S. Lyon e CaL Lyn chegam ao Rio de Janeiro',
+      resumo: 'O Presidente Internacional e a CaL Lyn chegaram ao Rio de Janeiro e foram recebidos com grande alegria pelos companheiros do Distrito.',
+      imagem: 'assets/img/noticias/ip-chegada-rio.webp',
+      url: 'https://www.lionsclubs.org/en/discover-our-clubs/our-leaders',
+      rotuloLink: 'Conhecer a biografia de Lyon'
+    },
+    {
+      id: 'ip-jantar-rio',
+      categoria: 'Internacional',
+      titulo: 'IP CL Mark S. Lyon no Rio, em jantar de companheirismo',
+      resumo: 'Veja as fotos do jantar de companheirismo com o Presidente Internacional durante a visita ao Rio de Janeiro. As imagens se alternam no próprio cartão.',
+      imagem: 'assets/img/noticias/ip-jantar-rio.webp',
+      nota: 'Galeria de fotos'
     },
     {
       id: 'van-faf',
@@ -139,11 +163,42 @@ const DLC1 = {
       rotuloLink: 'Página do clube'
     },
     {
+      id: 'strides-diabetes',
+      categoria: 'Saúde',
+      titulo: 'Assessoria de Diabetes do DLC-1 ganha página exclusiva',
+      resumo: 'Uma página para orientar os Lions Clubes a promoverem a prevenção do diabetes, uma das metas globais de LCI.',
+      imagem: 'assets/img/noticias/strides-diabetes.webp',
+      ajuste: 'conter', fundo: '#000000',
+      url: 'https://www.materclube.org/DIABETES-LC1/',
+      rotuloLink: 'Acessar a página'
+    },
+    {
+      id: 'parceria-acd',
+      categoria: 'Saúde',
+      titulo: 'Mater Clube e ACD: parceria pela prevenção do diabetes',
+      resumo: 'O Mater Clube é parceiro da ACD, Associação Carioca dos Diabéticos, para orientar os Lions Clubes a promoverem a prevenção desta doença, uma das metas globais de LCI.',
+      imagem: 'assets/img/noticias/parceria-acd.webp',
+      ajuste: 'conter', fundo: '#ffffff',
+      url: 'https://www.diabetes-rio.org/',
+      rotuloLink: 'Conhecer a ACD'
+    },
+    {
+      id: 'instagram-governadora',
+      categoria: 'Distrito',
+      titulo: 'Siga a Governadora no Instagram',
+      resumo: 'Acompanhe tudo o que a GD Silvia Regina Nunes faz à frente do Distrito, no perfil @distritolc1.',
+      imagem: 'assets/img/noticias/instagram-gd.webp',
+      ajuste: 'conter', fundo: '#0c1015',
+      url: 'https://www.instagram.com/distritolc1',
+      rotuloLink: 'Seguir @distritolc1'
+    },
+    {
       id: 'leoes-poeticos',
       categoria: 'Cultura',
       titulo: 'Leões poéticos despertam a sensibilidade para servir',
       resumo: 'Inscrições abertas para a participação dos associados dos Lions Clubes de todo o Brasil, com a CaL Sandra Simões do LC RJ Cachambi e a CaL Fátima Soares do LC RJ Princesa do Leme.',
-      imagem: 'assets/img/noticias/leoes-poeticos-2026.webp'
+      imagem: 'assets/img/noticias/leoes-poeticos-2026.webp',
+      nota: 'Inscrições abertas'
     },
     {
       id: 'cultura-paz',
@@ -151,8 +206,19 @@ const DLC1 = {
       titulo: 'Fórum "Lions e a Cultura de Paz"',
       resumo: 'A Academia Brasileira de Cultura Leonística realizará, no dia 21 de setembro de 2026, às 20 horas (horário de Brasília), transmissão pelo YouTube comemorativa ao Dia Internacional da Cultura de Paz, definido pela Organização das Nações Unidas (ONU).',
       imagem: 'assets/img/noticias/forum-cultura-paz.webp',
+      ajuste: 'conter', fundo: '#ffffff',
       url: 'https://www.agdl.org.br/lionsculturapazforum/',
       rotuloLink: 'Acessar o fórum'
+    },
+    {
+      id: 'armando-fajardo',
+      categoria: 'Distrito',
+      titulo: 'Armando Fajardo trouxe o Lions Clubes para o Brasil',
+      resumo: 'O Leão nº 1 do Brasil. Conheça a biografia de quem plantou o leonismo no país e dá nome à Fundação Armando Fajardo.',
+      imagem: 'assets/img/noticias/armando-fajardo.webp',
+      ajuste: 'conter', fundo: '#3b3b3b',
+      url: 'https://www.flumignano.com/lionscluberiodejaneiro/ARMANDO_FAJARDO_LIFE.htm',
+      rotuloLink: 'Ler a biografia'
     }
   ],
 
@@ -324,25 +390,25 @@ const DLC1 = {
     { nome: 'LC RJ Alto da Boa Vista', tipo: 'lions' },
     { nome: 'LC RJ Arnaldo Guinle', tipo: 'lions' },
     { nome: 'LC RJ Arpoador', tipo: 'lions' },
-    { nome: 'LC RJ Bangu', tipo: 'lions' },
+    { nome: 'LC RJ Bangu', tipo: 'lions', pagina: 'clube-recreio.html#terreirao', rotuloPagina: 'Ação do Terreirão' },
     { nome: 'LC RJ Barra da Tijuca', tipo: 'lions' },
     { nome: 'LC RJ Bonsucesso', tipo: 'lions' },
     { nome: 'LC RJ Botafogo', tipo: 'lions' },
-    { nome: 'LC RJ Cachambi', tipo: 'lions' },
+    { nome: 'LC RJ Cachambi', tipo: 'lions', pagina: 'clube-recreio.html#terreirao', rotuloPagina: 'Ação do Terreirão' },
     { nome: 'LC RJ Campo Grande', tipo: 'lions' },
-    { nome: 'LC RJ Carioca', tipo: 'lions' },
+    { nome: 'LC RJ Carioca', tipo: 'lions', pagina: 'clube-recreio.html#terreirao', rotuloPagina: 'Ação do Terreirão' },
     { nome: 'LC RJ Catete', tipo: 'lions' },
     { nome: 'LC RJ Ciber da União', tipo: 'lions' },
     { nome: 'LC RJ Ciber Força do Servir', tipo: 'lions' },
     { nome: 'LC RJ Ciber Matheus Pra Sempre', tipo: 'lions' },
     { nome: 'LC RJ Ciber Motivação CL Eloy Silva', tipo: 'lions' },
     { nome: 'LC RJ Ciber Responsabilidade Social', tipo: 'lions' },
-    { nome: 'LC RJ Cidade Maravilhosa', tipo: 'lions' },
+    { nome: 'LC RJ Cidade Maravilhosa', tipo: 'lions', pagina: 'clube-recreio.html#terreirao', rotuloPagina: 'Ação do Terreirão' },
     { nome: 'LC RJ Colorindo a Vida', tipo: 'lions' },
     { nome: 'LC RJ Copacabana', tipo: 'lions' },
     { nome: 'LC RJ Corrente pelo Bem', tipo: 'lions' },
     { nome: 'LC RJ Cristo Redentor', tipo: 'lions' },
-    { nome: 'LC RJ do Rio de Janeiro Mater Clube', tipo: 'lions' },
+    { nome: 'LC RJ do Rio de Janeiro Mater Clube', tipo: 'lions', pagina: 'https://www.materclube.org/', rotuloPagina: 'Site do clube' },
     { nome: 'LC RJ Embaixadores da Alegria', tipo: 'lions' },
     { nome: 'LC RJ Engenho Velho', tipo: 'lions' },
     { nome: 'LC RJ Estácio', tipo: 'lions' },
@@ -353,11 +419,11 @@ const DLC1 = {
     { nome: 'LC RJ Glória', tipo: 'lions' },
     { nome: 'LC RJ Golfe Olímpico', tipo: 'lions' },
     { nome: 'LC RJ Grajaú', tipo: 'lions' },
-    { nome: 'LC RJ Guaratiba', tipo: 'lions' },
+    { nome: 'LC RJ Guaratiba', tipo: 'lions', pagina: 'clube-recreio.html#terreirao', rotuloPagina: 'Ação do Terreirão' },
     { nome: 'LC RJ Humaitá', tipo: 'lions' },
     { nome: 'LC RJ Ipanema', tipo: 'lions' },
     { nome: 'LC RJ Jacaré', tipo: 'lions' },
-    { nome: 'LC RJ Jacarepaguá', tipo: 'lions' },
+    { nome: 'LC RJ Jacarepaguá', tipo: 'lions', pagina: 'clube-recreio.html#terreirao', rotuloPagina: 'Ação do Terreirão' },
     { nome: 'LC RJ Jacarepaguá Freguesia', tipo: 'lions' },
     { nome: 'LC RJ Jardim Botânico', tipo: 'lions' },
     { nome: 'LC RJ Jardim de Alá', tipo: 'lions' },
@@ -376,7 +442,7 @@ const DLC1 = {
     { nome: 'LC RJ Penha', tipo: 'lions' },
     { nome: 'LC RJ Pilares', tipo: 'lions' },
     { nome: 'LC RJ Praça da Bandeira', tipo: 'lions' },
-    { nome: 'LC RJ Princesa do Leme', tipo: 'lions' },
+    { nome: 'LC RJ Princesa do Leme', tipo: 'lions', pagina: 'clube-princesa-do-leme.html' },
     { nome: 'LC RJ Realengo', tipo: 'lions' },
     { nome: 'LC RJ Recreio dos Bandeirantes', tipo: 'lions', pagina: 'clube-recreio.html' },
     { nome: 'LC RJ Rio Comprido', tipo: 'lions' },
@@ -386,17 +452,17 @@ const DLC1 = {
     { nome: 'LC RJ Santa Cruz', tipo: 'lions' },
     { nome: 'LC RJ Santa Cruz Nilton Costa', tipo: 'lions' },
     { nome: 'LC RJ Santa Teresa', tipo: 'lions' },
-    { nome: 'LC RJ Sernambetiba', tipo: 'lions' },
+    { nome: 'LC RJ Sernambetiba', tipo: 'lions', pagina: 'clube-sernambetiba.html' },
     { nome: 'LC RJ Sepetiba', tipo: 'lions' },
-    { nome: 'LC RJ São Cristóvão', tipo: 'lions' },
-    { nome: 'LC RJ Taquara', tipo: 'lions' },
+    { nome: 'LC RJ São Cristóvão', tipo: 'lions', pagina: 'clube-sao-cristovao.html' },
+    { nome: 'LC RJ Taquara', tipo: 'lions', pagina: 'clube-taquara.html' },
     { nome: 'LC RJ Univ. Castelo Branco', tipo: 'lions' },
     { nome: 'LC RJ Urca', tipo: 'lions' },
     { nome: 'LC RJ Vargem Grande', tipo: 'lions' },
     { nome: 'LC RJ Vargens', tipo: 'lions' },
     { nome: 'LC RJ Vila Isabel', tipo: 'lions' },
     { nome: 'LC RJ Vila Valqueire', tipo: 'lions' },
-    { nome: 'LC RJ Vozes da Pólio', tipo: 'lions' },
+    { nome: 'LC RJ Vozes da Pólio', tipo: 'lions', pagina: 'clube-vozes-da-polio.html' },
     { nome: 'LC São João de Meriti', tipo: 'lions' },
     { nome: 'LC São José do Vale do Rio Preto', tipo: 'lions' },
     { nome: 'LC São Lourenço', tipo: 'lions' },
@@ -462,7 +528,8 @@ const DLC1 = {
     { nome: 'Revista Fator Brasil', imagem: 'assets/img/anuncios/fator-brasil.webp', url: 'https://www.revistafatorbrasil.com.br/' },
     { nome: 'Flumignano Instituto de Medicina', imagem: 'assets/img/anuncios/instituto-flumignano.webp', url: 'https://www.medicina.flumignano.com/', fundo: '#14305c' },
     { nome: 'ESIL Imobiliária', imagem: 'assets/img/anuncios/ecil.webp', url: 'https://www.esil.com.br/' },
-    { nome: 'EDEL', imagem: 'assets/img/anuncios/edel.webp', url: 'https://edel.com.br/' }
+    { nome: 'EDEL', imagem: 'assets/img/anuncios/edel.webp', url: 'https://edel.com.br/' },
+    { nome: '#oMINIMÍDIA Hub de Comunicação', imagem: 'assets/img/anuncios/ominimidia.webp', url: 'https://www.estudio.flumignano.com/' }
   ],
 
   /* ---------------------------------------------------------------------

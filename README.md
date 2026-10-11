@@ -21,8 +21,9 @@ npx serve .
 ou conectá-la ao Netlify, Vercel, GitHub Pages ou Cloudflare Pages. Nada a compilar.
 
 - **Endereços antigos continuam funcionando.** O `.htaccess` (Apache, a hospedagem atual)
-  e o `_redirects` (Netlify/Cloudflare) redirecionam as 16 páginas do site anterior, como
-  `/FAF/FUNDACAO_ARMANDO_FAJARDO_LIONS_CLUBES.html`, para as novas. Links já compartilhados
+  e o `_redirects` (Netlify/Cloudflare) redirecionam as páginas do site anterior, como
+  `/FAF/FUNDACAO_ARMANDO_FAJARDO_LIONS_CLUBES.html`, para as novas. Páginas de clubes que
+  no site antigo estavam "em construção" vão para a lista de clubes. Links já compartilhados
   e resultados do Google não quebram. No GitHub Pages esses arquivos não têm efeito.
 - **Imagem de compartilhamento** (WhatsApp, Facebook): `assets/img/marcas/og-dlc1.jpg`,
   referenciada com o endereço completo `https://www.lionsclubes-dlc1.org/...`. Se o site for
@@ -46,20 +47,24 @@ Lions/
 ├── alac.html               Academia de Letras, Artes e Ciências
 ├── doe.html                Doe com segurança
 ├── editorial.html          Editorial do portal
-├── clube-flamengo.html     ┐
-├── clube-ama-xerem.html    │ Páginas de clubes
-├── clube-recreio.html      │
-├── clube-quitandinha.html  ┘
+├── clube-flamengo.html          ┐
+├── clube-ama-xerem.html         │
+├── clube-recreio.html           │ Páginas de clubes
+├── clube-quitandinha.html       │ (Recreio traz a Ação Social do Terreirão,
+├── clube-princesa-do-leme.html  │  usada também pelos outros clubes que a realizam)
+├── clube-sao-cristovao.html     │
+├── clube-vozes-da-polio.html    │
+├── clube-sernambetiba.html      │
+├── clube-taquara.html           ┘
 ├── 404.html                Página de erro com a marca
 ├── .htaccess               Redirecionamentos 301 do site antigo (Apache) e cache
 ├── _redirects              Os mesmos redirecionamentos para Netlify/Cloudflare
-├── favicon.ico, site.webmanifest
+├── favicon.ico, site.webmanifest   Ícone DLC1 (púrpura sobre amarelo)
 └── assets/
     ├── css/estilo.css      Design system (tokens, componentes, temas)
     ├── js/dados.js         ★ TODO O CONTEÚDO EDITÁVEL
     ├── js/site.js          Montagem da interface e interações
-    ├── fonts/              Plus Jakarta Sans e Source Serif 4 (auto-hospedadas)
-    └── img/                Fotos em WebP, logos e ícones
+    └── img/                Fotos em WebP (noticias, anuncios, clubes), logos e ícones
 ```
 
 ---
@@ -81,8 +86,10 @@ Adicione um bloco no **início** da lista `noticias` (o primeiro aparece primeir
   resumo: 'Um parágrafo descrevendo a ação, com os nomes dos companheiros envolvidos.',
   imagem: 'assets/img/noticias/arquivo.webp', // coloque a foto nessa pasta (de preferência WebP)
   url: 'clube-flamengo.html',                // opcional, página interna ou link externo
-  rotuloLink: 'Saiba mais'                   // opcional, texto do botão
-},
+  rotuloLink: 'Saiba mais',                  // opcional, texto do botão
+  nota: 'Galeria de fotos',                  // opcional, texto no lugar do botão quando não há url
+  ajuste: 'conter', fundo: '#000000'         // opcional, para artes com texto: mostra a imagem
+},                                           //   inteira, sem cortar, sobre a cor da própria arte
 ```
 
 A categoria vira automaticamente um filtro na home. Categoria nova = filtro novo, sem mexer em código.
@@ -94,6 +101,8 @@ Na lista `clubes`:
 ```js
 { nome: 'LC RJ Exemplo', tipo: 'lions' },                              // tipo: lions | leo | castor
 { nome: 'LC RJ Exemplo', tipo: 'lions', pagina: 'clube-exemplo.html' } // se o clube tiver página própria
+{ nome: 'LC RJ Exemplo', tipo: 'lions', pagina: 'https://site-do-clube.org/',
+  rotuloPagina: 'Site do clube' }                                       // link externo, com texto próprio
 ```
 
 Os contadores da página de clubes (121 / 10 / 29) se recalculam sozinhos.
@@ -121,7 +130,9 @@ com cor de fundo própria, evitando tarjas brancas em volta da imagem:
 ### Trocar telefone, e-mail, endereço ou redes sociais
 
 Tudo fica no bloco `instituicao`, no topo do arquivo. Mudou ali, muda no cabeçalho
-e no rodapé de todas as páginas de uma vez.
+e no rodapé de todas as páginas de uma vez. O canal **Envie sua notícia** (e-mail e
+WhatsApp da #oMINIMÍDIA) fica em `instituicao.envieNoticia` e aparece abaixo das
+notícias na home e no rodapé.
 
 ### Criar a página de um novo clube
 
@@ -132,11 +143,17 @@ usando o campo `pagina`.
 
 ## Identidade visual
 
-O site segue o padrão das artes do Instagram [@distritolc1](https://www.instagram.com/distritolc1):
+O site usa os pantones oficiais do Lions International e segue o padrão das artes do
+Instagram [@distritolc1](https://www.instagram.com/distritolc1):
 
-- **Azul royal** `#0b47a1` como base, com brilho `#1557c4` no centro e `#062a63` nas bordas.
-- **Ouro quente** `#ffc20e` como única cor de destaque. Para texto pequeno sobre azul usa-se
-  `#ffd54f`, que mantém contraste AA mesmo no ponto mais claro do gradiente.
+- **Royal Azure** `#0A3DAA` como base da marca, com brilho `#1a52c2` no centro e `#05215e`
+  nas bordas das faixas azuis.
+- **Yellow Superstar** `#F9C911` como única cor de destaque (botões principais, régua sob os
+  títulos, sóis). Para texto pequeno sobre azul usa-se `#fbd54a`, que mantém contraste AA
+  mesmo no ponto mais claro do gradiente.
+- **Laviathan Purple** `#8A2993` em papel restrito: etiquetas de categoria das notícias,
+  marcador dos Leo Clubes e o ícone DLC1 (púrpura sobre amarelo, 4,8:1). No tema escuro
+  vira `#d08cd8` para manter o contraste.
 - **Sol de raios** (`assets/img/marcas/raios-sol.svg`) surgindo dos cantos das faixas azuis,
   sempre do lado oposto ao texto. Um grão finíssimo tira o aspecto de gradiente digital.
 - **Palavra-chave destacada** no título: envolva o trecho em `<span class="realce">…</span>`.
@@ -146,9 +163,9 @@ O site segue o padrão das artes do Instagram [@distritolc1](https://www.instagr
 
 Estão escritas no topo de `assets/css/estilo.css`. Em resumo:
 
-- **Tipografia**: Plus Jakarta Sans em títulos e interface; Source Serif 4 só nos textos
-  longos. As duas ficam em `assets/fonts`, sem requisição ao Google (mais rápido e sem
-  enviar o IP do visitante a terceiros).
+- **Tipografia oficial do Lions**: Helvetica Neue em tudo, de títulos a textos de apoio;
+  Arial é a alternativa oficial (Windows) e Roboto cobre o Android. São fontes do sistema:
+  nada a baixar, nenhuma requisição a terceiros. Pesos usados: regular, médio e negrito.
 - **Formas**: botões, chips e busca em pílula; etiquetas com 6px; cartões com 20px;
   blocos de destaque com 28px.
 - **Ações**: a ação principal de cada bloco é um botão; a secundária é um link com seta

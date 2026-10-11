@@ -204,6 +204,7 @@
                 <li><a href="lideranca.html">Cursos de liderança</a></li>
                 <li><a href="subsidios.html">Solicitar subsídios</a></li>
                 <li><a href="mailto:${inst.email}" data-abrir-contato>Ser voluntário</a></li>
+                <li><a href="mailto:${inst.envieNoticia.email}">Enviar uma notícia</a></li>
               </ul>
             </div>
 
@@ -384,11 +385,14 @@
 
     const acao = n.url
       ? `<a class="cartao__link" href="${n.url}"${atributos}>${n.rotuloLink || 'Saiba mais'} ${ICONES.seta}</a>`
-      : '<span class="cartao__nota">Ação permanente do Distrito</span>';
+      : `<span class="cartao__nota">${n.nota || 'Ação permanente do Distrito'}</span>`;
+    /* `ajuste: 'conter'` mostra a arte inteira (banners com texto), sem cortar as bordas */
+    const conter = n.ajuste === 'conter' ? ' cartao__midia--conter' : '';
+    const fundo = n.fundo ? ` style="background:${n.fundo}"` : '';
 
     return `
       <article class="cartao${manchete} revelar" data-categoria="${n.categoria}">
-        <div class="cartao__midia">
+        <div class="cartao__midia${conter}"${fundo}>
           <img src="${n.imagem}" alt="${n.titulo}" loading="lazy" decoding="async">
         </div>
         <div class="cartao__corpo">
@@ -456,8 +460,9 @@
     const grupos = { lions: 'Lions Clubes', leo: 'Leo Clubes', castor: 'Clubes de Castores' };
 
     const html = DLC1.clubes.map((c) => {
+      const externo = c.pagina && /^https?:/.test(c.pagina) ? ' target="_blank" rel="noopener"' : '';
       const link = c.pagina
-        ? `<a class="clube__pagina" href="${c.pagina}">Ver página ${ICONES.seta}</a>`
+        ? `<a class="clube__pagina" href="${c.pagina}"${externo}>${c.rotuloPagina || 'Ver página'} ${ICONES.seta}</a>`
         : '';
       return `
         <div class="clube clube--${c.tipo}" data-tipo="${c.tipo}" data-busca="${semAcento(c.nome)}">
@@ -597,6 +602,24 @@
   }
 
   /* =======================================================================
+     ENVIE SUA NOTÍCIA (canal de pauta, abaixo da grade de notícias)
+     ======================================================================= */
+  function montarPauta() {
+    const alvo = $('#pauta-noticias');
+    if (!alvo) return;
+    const p = inst.envieNoticia;
+    alvo.innerHTML = `
+      <div class="pauta__texto">
+        <h3>Envie sua notícia</h3>
+        <p>O seu clube realizou uma ação? Mande fotos e um breve relato para publicarmos aqui.</p>
+      </div>
+      <div class="pauta__acoes">
+        <a class="botao botao--primario" href="mailto:${p.email}">${ICONES.email} ${p.email}</a>
+        <a class="botao botao--contorno" href="${p.whatsappUrl}" target="_blank" rel="noopener">${ICONES.whatsapp} WhatsApp ${p.whatsapp}</a>
+      </div>`;
+  }
+
+  /* =======================================================================
      ÍNDICE AUTOMÁTICO (páginas longas)
      ======================================================================= */
   function montarIndice() {
@@ -716,6 +739,7 @@
     montarCausas();
     montarFaixaCausas();
     montarApoiadores();
+    montarPauta();
     montarIndice();
     preencherDinamicos();
     iniciarRolagem();

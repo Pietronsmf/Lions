@@ -16,6 +16,19 @@ Redirect 301 "/CLUBES/LC_RJ_FLAMENGO/LC_RJ_FLAMENGO.html" /clube-flamengo.html
 Redirect 301 "/CLUBES/LC_DUQUE_DE_CAXIAS_AMA_XEREM/LC_DUQUE_DE_CAXIAS_AMA_XEREM.html" /clube-ama-xerem.html
 Redirect 301 "/CLUBES/LC_RJ_RECREIO_DOS_BANDEIRANTES/LC_RJ_RECREIO_DOS_BANDEIRANTES.html" /clube-recreio.html
 Redirect 301 "/CLUBES/LC_PETROPOLIS_QUITANDINHA/LC_PETROPOLIS_QUITANDINHA.html" /clube-quitandinha.html
+Redirect 301 "/CLUBES/LC_RJ_PRINCESA_DO_LEME/LC_RJ_PRINCESA_DO_LEME.html" /clube-princesa-do-leme.html
+Redirect 301 "/CLUBES/LC_RJ_SAO_CRISTOVAO/LC_RJ_SAO_CRISTOVAO.html" /clube-sao-cristovao.html
+Redirect 301 "/CLUBES/LC_RJ_VOZES_DA_POLIO/LC_RJ_VOZES_DA_POLIO.html" /clube-vozes-da-polio.html
+Redirect 301 "/CLUBES/LC_RJ_SERNAMBETIBA/LC_RJ_SERNAMBETIBA.html" /clube-sernambetiba.html
+Redirect 301 "/CLUBES/LC_RJ_TAQUARA/LC_RJ_TAQUARA.html" /clube-taquara.html
+Redirect 301 "/CLUBES/LC_RJ_BANGU/LC_RJ_BANGU.html" /clube-recreio.html
+Redirect 301 "/CLUBES/LC_RJ_CACHAMBI/LC_RJ_CACHAMBI.html" /clube-recreio.html
+Redirect 301 "/CLUBES/LC_RJ_CARIOCA/LC_RJ_CARIOCA.html" /clube-recreio.html
+Redirect 301 "/CLUBES/LC_RJ_CIDADE_MARAVILHOSA/LC_RJ_CIDADE_MARAVILHOSA.html" /clube-recreio.html
+Redirect 301 "/CLUBES/LC_RJ_GUARATIBA/LC_RJ_GUARATIBA.html" /clube-recreio.html
+Redirect 301 "/CLUBES/LC_RJ_JACAREPAGUA/LC_RJ_JACAREPAGUA.html" /clube-recreio.html
+# demais clubes: páginas "em construção" no site antigo, vão para a lista
+RedirectMatch 301 "^/CLUBES/.+" /clubes.html
 Redirect 301 "/CAUSAS/NOSSAS_CAUSAS_LIONS_INTERNACIONAL.html" /causas.html
 Redirect 301 "/DOE/DOE PARA OS LIONS CLUBES COM SEGURANCA.html" /doe.html
 Redirect 301 "/ALAC/ALAC-ACADEMIA_DE_LETRAS_ARTES_E_CIENCIAS_DO_DLC-1.html" /alac.html
