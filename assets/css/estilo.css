@@ -60,6 +60,7 @@ input,select,textarea{font-size:max(1rem,16px)}
   --ouro-texto:#7a5d00;          /* ouro legível sobre fundo claro (7:1) */
   --ouro-sobre-azul:#fbd54a;     /* texto pequeno dourado sobre azul: 4,8:1 no ponto mais claro */
   --roxo:var(--lions-purple);
+  --linha-destaque:color-mix(in srgb,var(--lions-gold) 20%,transparent); /* linha realçada das tabelas */
 
   /* Sol de raios, assinatura gráfica da gestão 2026/27 */
   --raios:url('../img/marcas/raios-sol.svg');
@@ -145,6 +146,7 @@ input,select,textarea{font-size:max(1rem,16px)}
   --foco:var(--lions-gold);
   --ouro-texto:var(--lions-gold);
   --roxo:#d08cd8;                /* púrpura clareado: 6,9:1 sobre a superfície escura */
+  --linha-destaque:color-mix(in srgb,var(--brand) 16%,transparent); /* amarelo sobre escuro vira oliva */
   --shadow-sm:0 1px 3px rgba(0,0,0,.5);
   --shadow:0 8px 24px -10px rgba(0,0,0,.6);
   --shadow-lg:0 24px 60px -20px rgba(0,0,0,.75);
@@ -265,7 +267,9 @@ strong{font-weight:700;color:var(--ink)}
 .cabecalho .container{width:min(100% - 2.5rem,1320px)}
 .cabecalho__interno{display:flex;align-items:center;gap:var(--sp-4);min-height:var(--header-h)}
 
-.marca{display:flex;align-items:center;gap:.7rem;flex-shrink:0;border-radius:var(--r)}
+/* margin-right:auto empurra menu e botões para a direita; o menu não pode fazer isso,
+   porque abaixo de 1180px ele vira gaveta e some, e os botões grudavam na logo */
+.marca{display:flex;align-items:center;gap:.7rem;flex-shrink:0;margin-right:auto;border-radius:var(--r)}
 .marca__emblema{
   width:auto;height:46px;flex-shrink:0;
   filter:drop-shadow(0 2px 5px rgba(10,61,170,.28));
@@ -273,9 +277,9 @@ strong{font-weight:700;color:var(--ink)}
 }
 .marca__texto{display:flex;flex-direction:column;line-height:1.15}
 .marca__nome{font-family:var(--font-display);font-weight:700;font-size:1.02rem;letter-spacing:-.025em}
+.marca__nome-curto{display:none}
 .marca__desc{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
 
-.nav{margin-left:auto}
 .nav__lista{display:flex;align-items:center;gap:.1rem}
 .nav__link{
   position:relative;display:block;padding:.55rem .58rem;border-radius:var(--r-sm);
@@ -550,6 +554,10 @@ a.contato-item:active{transform:scale(.985)}
   transition:transform var(--t-ui) var(--ease-out),box-shadow var(--t-ui) var(--ease-out);
 }
 .cartao__nota{font-size:.8rem;color:var(--ink-3)}
+/* "Ver mais notícias": só existe no celular (ver o bloco de até 760px) */
+.mais-noticias{display:none;justify-content:center;margin-top:1.25rem}
+.mais-noticias .botao{width:100%}
+.mais-noticias__total{color:var(--ink-3);font-weight:500}
 /* Arte com texto (banner, logo): aparece inteira, sem véu; o `fundo` de dados.js
    pinta as sobras com a cor da própria arte */
 .cartao__midia--conter img{object-fit:contain}
@@ -636,6 +644,81 @@ a.pilar:active{transform:scale(.985)}
 }
 .numero-grande + h3{margin-top:.65rem}
 .secao--escura .numero-grande{color:var(--lions-gold)}
+
+/* ---------- 16b. Universo Lions (indicadores e tabelas de afiliação) ---------- */
+.universo__indicadores{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  background:var(--surface);border-radius:var(--r-xl);box-shadow:0 0 0 1px var(--line),var(--shadow-sm);
+}
+.indicador{display:flex;flex-direction:column;gap:.45rem;padding:clamp(1.3rem,1rem + 1.2vw,2rem) clamp(1.1rem,.8rem + 1.2vw,2rem)}
+.indicador + .indicador{border-left:1px solid var(--line)}
+/* números grandes com algarismos proporcionais; tabulares só nas colunas das tabelas */
+.indicador__valor{
+  font-family:var(--font-display);font-weight:700;line-height:1;letter-spacing:-.03em;
+  font-size:clamp(2rem,1.45rem + 2.2vw,3.3rem);color:var(--brand);
+}
+.indicador__rotulo{font-size:var(--fs-sm);color:var(--ink-2);font-weight:500}
+.universo__frase{margin:1.5rem 0 0;color:var(--ink-2);font-size:var(--fs-md)}
+.universo__frase b{color:var(--ink)}
+
+.universo__tabelas{display:grid;gap:clamp(1rem,.7rem + 1vw,1.5rem);margin-top:clamp(1.5rem,1.2rem + 1vw,2.2rem)}
+@media (min-width:640px){
+  .universo__tabelas{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .universo__cartao--brasil{grid-column:1 / -1}
+}
+@media (min-width:1000px){
+  .universo__tabelas{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .universo__cartao--brasil{grid-column:auto}
+}
+.universo__cartao{
+  min-width:0;overflow-x:auto;padding:1.15rem 1.15rem 1rem;
+  background:var(--surface);border-radius:var(--r-lg);box-shadow:0 0 0 1px var(--line),var(--shadow-sm);
+}
+.universo__tabela{width:100%;border-collapse:collapse;font-size:.86rem;font-variant-numeric:tabular-nums}
+.universo__tabela caption{
+  caption-side:top;text-align:left;padding:0 .45rem .8rem;
+  font-family:var(--font-display);font-weight:700;font-size:var(--fs-lg);color:var(--ink);letter-spacing:-.015em;
+}
+.universo__tabela caption span{display:block;font-size:.78rem;font-weight:500;color:var(--ink-3);letter-spacing:0;margin-top:.15rem}
+.universo__tabela th,.universo__tabela td{padding:.5rem .45rem;text-align:right;white-space:nowrap}
+.universo__tabela thead th{
+  font-size:.72rem;font-weight:700;color:var(--ink-3);letter-spacing:.02em;
+  border-bottom:1px solid var(--line-strong);padding-top:0;
+}
+.universo__tabela :is(thead,tbody,tfoot) th:first-child{text-align:left;width:100%}
+.universo__tabela tbody tr + tr{border-top:1px solid var(--line)}
+.universo__tabela tbody th{font-weight:500;color:var(--ink)}
+.universo__tabela td{color:var(--ink-2)}
+.universo__tabela abbr{text-decoration:none;cursor:help}
+.universo__tabela tfoot :is(th,td){font-weight:700;color:var(--ink);border-top:1px solid var(--line-strong)}
+/* fundo nas células, não na linha: assim o arredondamento das pontas funciona em todo navegador */
+.universo__tabela tbody tr.is-destaque > *{background:var(--linha-destaque);font-weight:700;color:var(--ink)}
+.universo__tabela tbody tr.is-destaque > :first-child{border-radius:var(--r-sm) 0 0 var(--r-sm)}
+.universo__tabela tbody tr.is-destaque > :last-child{border-radius:0 var(--r-sm) var(--r-sm) 0}
+.universo__pos{display:inline-block;min-width:2.1em;color:var(--ink-3);font-weight:500;font-size:.78rem}
+.universo__nome{display:inline-flex;flex-direction:column;gap:.3rem;vertical-align:middle;min-width:4.5rem;width:calc(100% - 2.3em)}
+.universo__cartao--brasil .universo__nome{width:100%}
+/* barra fina de proporção (associados): cinza nas demais linhas, azul na linha em destaque */
+.universo__barra{
+  display:block;height:5px;width:max(var(--p),3px);border-radius:0 3px 3px 0;
+  background:color-mix(in srgb,var(--ink) 20%,transparent);
+}
+.is-destaque .universo__barra{background:var(--brand)}
+.universo__nota{margin:.85rem .45rem 0;font-size:.78rem;line-height:1.5;color:var(--ink-3)}
+.universo__nota b{color:var(--ink-2)}
+.universo__fonte{
+  display:flex;align-items:center;gap:.7rem;margin-top:1.4rem;
+  font-size:.82rem;color:var(--ink-3);
+}
+.universo__fonte img{width:30px;height:auto;flex-shrink:0}
+@media (max-width:760px){
+  .universo__indicadores{grid-template-columns:minmax(0,1fr)}
+  .indicador{flex-direction:row;align-items:baseline;flex-wrap:wrap;gap:.2rem .6rem;padding:1.05rem 1.25rem}
+  .indicador + .indicador{border-left:0;border-top:1px solid var(--line)}
+  .universo__cartao{padding:1rem .7rem .9rem}
+  .universo__tabela{font-size:.8rem}
+  .universo__tabela th,.universo__tabela td{padding:.48rem .3rem}
+}
 
 /* ---------- 17. Faixa das causas na home ---------- */
 .faixa-causas{
@@ -937,7 +1020,6 @@ a.pilar:active{transform:scale(.985)}
 /* ---------- 26. Responsivo ---------- */
 /* Celulares pequenos (iPhone SE e similares): só o emblema no cabeçalho */
 @media (max-width:380px){
-  .marca__texto{display:none}
   .cabecalho__interno{gap:.55rem}
   .cabecalho .container{width:min(100% - 1.75rem,1320px)}
   .cabecalho__acoes{gap:.35rem}
@@ -945,11 +1027,18 @@ a.pilar:active{transform:scale(.985)}
 }
 /* Sóis menores em telas estreitas, para não disputarem espaço com o texto */
 @media (max-width:900px){
-  .hero{background-size:215px 215px,245px 245px,auto,auto}
-  .hero-pagina{background-size:195px 195px,auto,auto}
-  .secao--escura{background-size:200px 200px,215px 215px,auto,auto}
-  .chamada{background-size:165px 165px,185px 185px,auto,auto}
-  .destaque-citacao{background-size:165px 165px,auto,auto}
+  /* o deslocamento acompanha o tamanho (cerca de metade do sol para fora); com os
+     deslocamentos do computador só sobravam pontas de raio soltas nos cantos */
+  .hero{background-size:215px 215px,245px 245px,auto,auto;
+    background-position:right -100px top -106px,right -112px bottom -118px,0 0,0 0}
+  .hero-pagina{background-size:195px 195px,auto,auto;
+    background-position:right -92px top -98px,0 0,0 0}
+  .secao--escura{background-size:200px 200px,215px 215px,auto,auto;
+    background-position:left -104px top -108px,right -100px bottom -106px,0 0,0 0}
+  .chamada{background-size:165px 165px,185px 185px,auto,auto;
+    background-position:right -80px top -84px,right -88px bottom -94px,0 0,0 0}
+  .destaque-citacao{background-size:165px 165px,auto,auto;
+    background-position:right -80px bottom -86px,0 0,0 0}
   .faixa-causas{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:1340px){
@@ -986,6 +1075,15 @@ a.pilar:active{transform:scale(.985)}
   /* min-height junto de aspect-ratio derivava a largura e estourava a coluna */
   .destaque__midia{min-height:0;aspect-ratio:16/10}
   .marca__emblema{height:38px}
+  /* celular: logo e, ao lado, a sigla DLC-1 */
+  .marca{gap:.55rem}
+  .marca__nome{font-size:1.2rem;letter-spacing:-.01em}
+  .marca__nome-longo{display:none}
+  .marca__nome-curto{display:inline}
+  /* o selo do hero ocupa a largura toda: o sol de cima ficaria atrás do texto */
+  .hero{background-size:0 0,245px 245px,auto,auto}
+  #lista-noticias.is-recolhida > .cartao:nth-child(n+7){display:none}
+  .mais-noticias{display:flex}
   .hero__selo{font-size:.7rem;gap:.45rem;padding:.38rem .85rem .38rem .4rem;margin-bottom:1.1rem}
   .hero__selo b{font-size:.66rem;white-space:nowrap;padding:.2rem .55rem}
   .hero__titulo em{white-space:normal}

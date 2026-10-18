@@ -541,5 +541,49 @@ const DLC1 = {
     { rotulo: 'Fundação Armando Fajardo', url: 'faf.html' },
     { rotulo: 'Lions Brasil', url: 'http://www.lions.org.br/' },
     { rotulo: 'Lions Liderança', url: 'https://lionslideranca.org.br/portal/' }
-  ]
+  ],
+
+  /* ---------------------------------------------------------------------
+     9. UNIVERSO LIONS (estatísticas de afiliação)
+     Atualize os números a cada novo Informe Oficial de Afiliação.
+     O total do Brasil e a posição do país são calculados sozinhos.
+     destaque: true marca a linha realçada (o DLC-1 pertence ao DM LC).
+     --------------------------------------------------------------------- */
+  universo: {
+    fonte: 'Informe Oficial de Afiliação de 31 de agosto de 2026',
+    paises: 172,
+    areasGeograficas: 34,
+    associados: 1379909,
+    clubes: 50408,
+    brasil: [
+      { dm: 'LA', associados: 6422,  ccll: 3147, ccall: 3275, clubes: 251 },
+      { dm: 'LB', associados: 5233,  ccll: 2564, ccall: 2669, clubes: 211 },
+      { dm: 'LC', associados: 11214, ccll: 5495, ccall: 5719, clubes: 463, destaque: true },
+      { dm: 'LD', associados: 17104, ccll: 8381, ccall: 8723, clubes: 533 }
+    ],
+    americaDoSul: [
+      { pais: 'Brasil',    associados: 39973, clubes: 1458, destaque: true },
+      { pais: 'Venezuela', associados: 10740, clubes: 408 },
+      { pais: 'Peru',      associados: 7724,  clubes: 379 },
+      { pais: 'Argentina', associados: 4395,  clubes: 244 },
+      { pais: 'Colômbia',  associados: 3630,  clubes: 213 },
+      { pais: 'Paraguai',  associados: 3331,  clubes: 125 },
+      { pais: 'Chile',     associados: 3068,  clubes: 169 },
+      { pais: 'Equador',   associados: 2980,  clubes: 126 },
+      { pais: 'Uruguai',   associados: 2855,  clubes: 138 },
+      { pais: 'Bolívia',   associados: 1877,  clubes: 97 }
+    ],
+    mundo: [
+      { pais: 'Índia',         associados: 303211, clubes: 9192 },
+      { pais: 'EUA',           associados: 248506, clubes: 9477 },
+      { pais: 'Japão',         associados: 90009,  clubes: 2627 },
+      { pais: 'Coreia (Rep.)', associados: 65615,  clubes: 2009 },
+      { pais: 'Alemanha',      associados: 51408,  clubes: 1579 },
+      { pais: 'Nepal',         associados: 43723,  clubes: 2261 },
+      { pais: 'China',         associados: 43149,  clubes: 1559 },
+      { pais: 'Itália',        associados: 40082,  clubes: 1445 },
+      { pais: 'Brasil',        associados: 39973,  clubes: 1458, destaque: true },
+      { pais: 'Canadá',        associados: 30270,  clubes: 1380 }
+    ]
+  }
 };

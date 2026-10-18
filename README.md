@@ -127,6 +127,13 @@ com cor de fundo própria, evitando tarjas brancas em volta da imagem:
   fundo: '#14305c' }   // opcional
 ```
 
+### Atualizar as estatísticas (Universo Lions)
+
+No bloco `universo`, no fim do arquivo: totais mundiais, a tabela do Brasil por Distrito
+Múltiplo e as listas da América do Sul e do Mundo. Troque os números a cada novo Informe
+Oficial de Afiliação e atualize o campo `fonte`. O total do Brasil e a frase "O Brasil é o
+9º país do mundo…" são calculados sozinhos. `destaque: true` marca a linha realçada.
+
 ### Trocar telefone, e-mail, endereço ou redes sociais
 
 Tudo fica no bloco `instituicao`, no topo do arquivo. Mudou ali, muda no cabeçalho
@@ -190,8 +197,10 @@ Testado de 320px a 1600px, em todas as páginas, sem rolagem horizontal.
 
 - **Cabeçalho**: faixa própria de até 1320px, mais larga que o corpo do site, senão o menu
   e o botão de contato não caberiam. Abaixo de 1340px o botão fica só com o ícone e o
-  subtítulo da marca recolhe; abaixo de 1180px o menu vira gaveta lateral; abaixo de
-  380px fica só o emblema.
+  subtítulo da marca recolhe; abaixo de 1180px o menu vira gaveta lateral; no celular
+  (até 760px) a marca vira a logo com a sigla **DLC-1** ao lado.
+  Quem empurra os botões para a direita é a marca (`margin-right:auto`), não o menu:
+  como o menu some abaixo de 1180px, os botões ficavam grudados na logo.
 - **Alvos de toque** de no mínimo 44px; botões ocupam a largura toda.
 - **Painel de busca e filtros**: em coluna, com `flex-wrap:nowrap` e `flex:0 0 auto` nos
   filhos. Sem isso, o eixo principal vira o vertical e o `flex:1 1 260px` do campo de
@@ -203,8 +212,25 @@ Testado de 320px a 1600px, em todas as páginas, sem rolagem horizontal.
 - **Cartão em destaque**: `min-height` zerado no celular, porque junto de `aspect-ratio`
   ele derivava a largura (230 × 1.6 = 368px) e passava da coluna.
 - **Índice das páginas longas** aparece **antes** do texto, compacto e com rolagem própria.
-- **Logos dos apoiadores** em duas colunas; demais grades em coluna única.
-- **Sóis de raios** reduzidos abaixo de 900px para não competirem com o texto.
+- **Logos dos apoiadores** em duas colunas, com a última linha centralizada; demais
+  grades em coluna única.
+- **Notícias**: no celular aparecem as 6 primeiras e o botão "Ver mais notícias" revela o
+  resto (escolher um tema também mostra todas daquele tema). No computador todas aparecem.
+- **Tabelas do Universo Lions** cabem em 320px sem rolagem lateral.
+- **Sóis de raios** reduzidos abaixo de 900px, com o deslocamento proporcional ao tamanho
+  (metade do sol para fora). No hero do celular só fica o sol de baixo, porque o de cima
+  bateria no selo do ano leonístico.
+
+## Depois de publicar uma alteração
+
+HTML, CSS e JavaScript são sempre revalidados (`.htaccess`): o navegador pergunta ao
+servidor se o arquivo mudou e só baixa de novo quando mudou. Assim uma notícia nova em
+`dados.js` aparece na hora para todo mundo.
+
+As páginas também chamam `estilo.css?v=20261018`, `dados.js?v=…`, `site.js?v=…` e os
+ícones com `?v=dlc1`. Isso força a troca para quem guardou a versão antiga antes desta
+regra existir. Numa mudança grande de visual, trocar essa data (buscar e substituir em
+todas as páginas) é uma garantia extra; para o dia a dia não é preciso.
 
 ## Recursos da interface
 

@@ -72,7 +72,7 @@
           <a class="marca" href="index.html" aria-label="Página inicial do Distrito LC-1">
             <img class="marca__emblema" src="assets/img/marcas/emblema-lions.webp" alt="" width="150" height="146" decoding="async">
             <span class="marca__texto">
-              <span class="marca__nome">Distrito LC-1</span>
+              <span class="marca__nome"><span class="marca__nome-longo">Distrito LC-1</span><span class="marca__nome-curto">DLC-1</span></span>
               <span class="marca__desc">Lions Clubes Internacional</span>
             </span>
           </a>
@@ -421,6 +421,33 @@
 
     lista.innerHTML = DLC1.noticias.map(cartaoNoticia).join('');
 
+    /* No celular a grade vira uma coluna só: 18 cartões passariam de 9.000px de rolagem.
+       Lá mostramos os 6 primeiros e um botão revela o resto (o CSS só recolhe abaixo de 760px). */
+    const LIMITE_CELULAR = 6;
+    let expandir = () => {};
+    if (DLC1.noticias.length > LIMITE_CELULAR) {
+      lista.classList.add('is-recolhida');
+      lista.insertAdjacentHTML('afterend', `
+        <div class="mais-noticias">
+          <button class="botao botao--contorno" type="button" aria-controls="lista-noticias">
+            Ver mais notícias <span class="mais-noticias__total">+${DLC1.noticias.length - LIMITE_CELULAR}</span>
+          </button>
+        </div>`);
+      const caixa = lista.nextElementSibling;
+      expandir = (focar) => {
+        if (!lista.classList.contains('is-recolhida')) return;
+        lista.classList.remove('is-recolhida');
+        caixa.remove();
+        /* o foco iria para o <body> junto com o botão: leva para a primeira notícia revelada */
+        const proxima = lista.children[LIMITE_CELULAR];
+        if (focar && proxima) {
+          proxima.setAttribute('tabindex', '-1');
+          proxima.focus({ preventScroll: true });
+        }
+      };
+      $('button', caixa).addEventListener('click', () => expandir(true));
+    }
+
     const contador = $('#contador-noticias');
     const atualizarContador = (n) => {
       if (contador) contador.innerHTML = `<b>${n}</b> ${n === 1 ? 'publicação' : 'publicações'}`;
@@ -432,6 +459,8 @@
         const botao = e.target.closest('[data-filtro]');
         if (!botao) return;
         const filtro = botao.dataset.filtro;
+        /* filtrar já é pedir para ver: mostra todas as notícias do tema escolhido */
+        expandir(false);
         $$('.chip', filtros).forEach((c) => {
           c.classList.toggle('is-ativo', c === botao);
           c.setAttribute('aria-pressed', String(c === botao));
@@ -620,6 +649,106 @@
   }
 
   /* =======================================================================
+     UNIVERSO LIONS (indicadores + tabelas de afiliação)
+     Tabelas reais, não imagem: leitores de tela, busca e celular leem tudo.
+     A barra de cada linha é só reforço visual; o número está sempre escrito.
+     ======================================================================= */
+  function montarUniverso() {
+    const alvo = $('#universo-lions');
+    const u = DLC1.universo;
+    if (!alvo || !u) return;
+
+    const fmt = (n) => n.toLocaleString('pt-BR');
+    const barra = (valor, max) =>
+      `<span class="universo__barra" style="--p:${(valor / max * 100).toFixed(1)}%" aria-hidden="true"></span>`;
+    const classe = (r) => (r.destaque ? ' class="is-destaque"' : '');
+
+    function tabelaPaises(titulo, lista) {
+      const max = Math.max(...lista.map((r) => r.associados));
+      const linhas = lista.map((r, i) => `
+        <tr${classe(r)}>
+          <th scope="row"><span class="universo__pos">${i + 1}º</span><span class="universo__nome">${r.pais}${barra(r.associados, max)}</span></th>
+          <td>${fmt(r.associados)}</td>
+          <td>${fmt(r.clubes)}</td>
+        </tr>`).join('');
+      return `
+        <div class="universo__cartao revelar">
+          <table class="universo__tabela">
+            <caption>${titulo}</caption>
+            <thead><tr><th scope="col">País</th><th scope="col">Associados</th><th scope="col">Clubes</th></tr></thead>
+            <tbody>${linhas}</tbody>
+          </table>
+        </div>`;
+    }
+
+    const br = u.brasil;
+    const soma = (k) => br.reduce((t, r) => t + r[k], 0);
+    const maxBr = Math.max(...br.map((r) => r.associados));
+    const linhasBr = br.map((r) => `
+      <tr${classe(r)}>
+        <th scope="row"><span class="universo__nome">${r.dm}${barra(r.associados, maxBr)}</span></th>
+        <td>${fmt(r.associados)}</td>
+        <td>${fmt(r.ccll)}</td>
+        <td>${fmt(r.ccall)}</td>
+        <td>${fmt(r.clubes)}</td>
+      </tr>`).join('');
+
+    /* a posição do Brasil sai das próprias listas: atualizou os números, a frase acompanha */
+    const pos = (lista) => lista.findIndex((r) => r.pais === 'Brasil') + 1;
+    const posMundo = pos(u.mundo);
+    const posAmerica = pos(u.americaDoSul);
+    const frase = posMundo && posAmerica
+      ? `<p class="universo__frase">O Brasil é o <b>${posMundo}º país do mundo</b> em associados e o <b>${posAmerica}º da América do Sul</b>.</p>`
+      : '';
+
+    alvo.innerHTML = `
+      <div class="universo__indicadores revelar">
+        <div class="indicador">
+          <span class="indicador__valor">${fmt(u.paises)}</span>
+          <span class="indicador__rotulo">países e ${fmt(u.areasGeograficas)} áreas geográficas</span>
+        </div>
+        <div class="indicador">
+          <span class="indicador__valor">${fmt(u.associados)}</span>
+          <span class="indicador__rotulo">associados</span>
+        </div>
+        <div class="indicador">
+          <span class="indicador__valor">${fmt(u.clubes)}</span>
+          <span class="indicador__rotulo">clubes</span>
+        </div>
+      </div>
+      ${frase}
+      <div class="universo__tabelas">
+        <div class="universo__cartao universo__cartao--brasil revelar">
+          <table class="universo__tabela">
+            <caption>Brasil <span>por Distrito Múltiplo</span></caption>
+            <thead><tr>
+              <th scope="col"><abbr title="Distrito Múltiplo">DM</abbr></th>
+              <th scope="col">Associados</th>
+              <th scope="col"><abbr title="Companheiros Leões">CCLL</abbr></th>
+              <th scope="col"><abbr title="Companheiras Leões">CCaLL</abbr></th>
+              <th scope="col">Clubes</th>
+            </tr></thead>
+            <tbody>${linhasBr}</tbody>
+            <tfoot><tr>
+              <th scope="row">Total</th>
+              <td>${fmt(soma('associados'))}</td>
+              <td>${fmt(soma('ccll'))}</td>
+              <td>${fmt(soma('ccall'))}</td>
+              <td>${fmt(soma('clubes'))}</td>
+            </tr></tfoot>
+          </table>
+          <p class="universo__nota">O DLC-1 integra o Distrito Múltiplo <b>LC</b>, em destaque. CCLL são os companheiros leões e CCaLL, as companheiras.</p>
+        </div>
+        ${tabelaPaises('América do Sul', u.americaDoSul)}
+        ${tabelaPaises('Mundo', u.mundo)}
+      </div>
+      <p class="universo__fonte">
+        <img src="assets/img/marcas/emblema-lions.webp" alt="" width="150" height="146" loading="lazy" decoding="async">
+        Estatísticas de acordo com o ${u.fonte}.
+      </p>`;
+  }
+
+  /* =======================================================================
      ÍNDICE AUTOMÁTICO (páginas longas)
      ======================================================================= */
   function montarIndice() {
@@ -740,6 +869,7 @@
     montarFaixaCausas();
     montarApoiadores();
     montarPauta();
+    montarUniverso();
     montarIndice();
     preencherDinamicos();
     iniciarRolagem();
