@@ -227,7 +227,7 @@ HTML, CSS e JavaScript são sempre revalidados (`.htaccess`): o navegador pergun
 servidor se o arquivo mudou e só baixa de novo quando mudou. Assim uma notícia nova em
 `dados.js` aparece na hora para todo mundo.
 
-As páginas também chamam `estilo.css?v=20261018`, `dados.js?v=…`, `site.js?v=…` e os
+As páginas também chamam `estilo.css?v=20261018b`, `dados.js?v=…`, `site.js?v=…` e os
 ícones com `?v=dlc1`. Isso força a troca para quem guardou a versão antiga antes desta
 regra existir. Numa mudança grande de visual, trocar essa data (buscar e substituir em
 todas as páginas) é uma garantia extra; para o dia a dia não é preciso.

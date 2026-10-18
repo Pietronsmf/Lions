@@ -291,7 +291,7 @@ strong{font-weight:700;color:var(--ink)}
   content:"";position:absolute;left:.58rem;right:.58rem;bottom:.22rem;height:3px;
   border-radius:3px;background:var(--lions-gold);
 }
-.cabecalho__acoes{display:flex;align-items:center;gap:.5rem}
+.cabecalho__acoes{display:flex;align-items:center;gap:.5rem;margin-left:auto;flex-shrink:0}
 
 .botao-icone{
   width:42px;height:42px;display:grid;place-items:center;border-radius:var(--r);
@@ -1062,6 +1062,11 @@ a.pilar:active{transform:scale(.985)}
 }
 @media (max-width:760px){
   :root{--header-h:66px}
+  /* celular: logo colada na esquerda e as 3 caixinhas coladas na direita, com a mesma
+     margem curta dos dois lados (antes o cabeçalho tinha 20px e o conteúdo 16px) */
+  .cabecalho .container{width:calc(100% - 1.25rem)}
+  .cabecalho__interno{justify-content:space-between}
+  .cabecalho__acoes{gap:.3rem}
   .botao-icone,.botao-contato{width:44px;height:44px}
   .chip{min-height:44px;padding:.6rem 1.05rem}
   .pauta{padding:1.25rem}
