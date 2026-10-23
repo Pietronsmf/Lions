@@ -3,27 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<title>Distrito LC-1 de Lions Clubes Internacional | Notícias da corrente do bem</title>
+<title>Distrito LC-1 de Lions Clubes Internacional | Notícias da corrente da bondade</title>
 <meta name="description" content="Portal oficial do Distrito LC-1 de Lions Clubes Internacional, o Berço do Leonismo no Brasil. Notícias, ações sociais, clubes, causas globais e formação de líderes.">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c1323">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/img/marcas/icone-32.png">
-<link rel="apple-touch-icon" href="assets/img/marcas/icone-180.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="favicon.ico?v=dlc1" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/marcas/icone-32.png?v=dlc1">
+<link rel="apple-touch-icon" href="assets/img/marcas/icone-180.png?v=dlc1">
+<link rel="manifest" href="site.webmanifest?v=dlc1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Distrito LC-1 de Lions Clubes Internacional">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Distrito LC-1 de Lions Clubes Internacional | Notícias da corrente do bem">
+<meta property="og:title" content="Distrito LC-1 de Lions Clubes Internacional | Notícias da corrente da bondade">
 <meta property="og:description" content="Portal oficial do Distrito LC-1 de Lions Clubes Internacional, o Berço do Leonismo no Brasil. Notícias, ações sociais, clubes, causas globais e formação de líderes.">
 <meta property="og:image" content="https://www.lionsclubes-dlc1.org/assets/img/marcas/og-dlc1.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Emblema do Lions Internacional sobre azul royal, Distrito LC-1">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/estilo.css">
+<link rel="stylesheet" href="assets/css/estilo.css?v=20261018b">
 <script>try{var t=localStorage.getItem('dlc1-tema');document.documentElement.setAttribute('data-tema',t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro'))}catch(e){}</script>
 </head>
 <body data-pagina="noticias">
@@ -39,7 +38,7 @@
     <div class="container hero__interno">
       <div>
         <span class="hero__selo"><b>AL <span data-ano-leonistico></span></b> Berço do Leonismo no Brasil</span>
-        <h1 class="hero__titulo">Nós Servimos<em>Servir com Equidade</em></h1>
+        <h1 class="hero__titulo">Servimos <em>com Equidade</em></h1>
         <p class="hero__texto">
           Voluntários que fazem o bem sem olhar a quem, em dezenas de clubes pelo Estado do
           Rio de Janeiro.
@@ -68,7 +67,7 @@
       <div class="cabecalho-secao cabecalho-secao--centro">
         <h2>Quem caminha ao <span class="realce">nosso lado</span></h2>
         <p class="subtitulo-secao">
-          Empresas e instituições que sustentam a corrente do bem do Distrito LC-1.
+          Empresas e instituições que sustentam a corrente da bondade do Distrito LC-1.
         </p>
       </div>
       <div class="apoiadores" id="lista-apoiadores"></div>
@@ -107,7 +106,7 @@
   <section class="secao" id="noticias">
     <div class="container">
       <div class="cabecalho-secao">
-        <h2>A <span class="realce">corrente do bem</span> em movimento</h2>
+        <h2>A <span class="realce">corrente da bondade</span> em movimento</h2>
         <p class="subtitulo-secao">
           Cada publicação aqui é uma ação real, com nome, rosto e comunidade. Filtre por tema
           para acompanhar o que mais importa para você.
@@ -120,6 +119,8 @@
       </div>
 
       <div class="grade grade--3" id="lista-noticias"></div>
+
+      <aside class="pauta revelar" id="pauta-noticias" aria-label="Envie sua notícia"></aside>
     </div>
   </section>
 
@@ -144,6 +145,19 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== UNIVERSO LIONS ===================== -->
+  <section class="secao" id="universo">
+    <div class="container">
+      <div class="cabecalho-secao">
+        <h2>Universo <span class="realce">Lions</span></h2>
+        <p class="subtitulo-secao">
+          Os números do Lions Clubs International no Brasil, na América do Sul e no mundo.
+        </p>
+      </div>
+      <div class="universo" id="universo-lions"></div>
     </div>
   </section>
 
@@ -205,7 +219,7 @@
 <button class="voltar-topo" id="voltar-topo" type="button" aria-label="Voltar ao topo"></button>
 <div id="rodape-site"></div>
 
-<script src="assets/js/dados.js"></script>
-<script src="assets/js/site.js"></script>
+<script src="assets/js/dados.js?v=20261018b"></script>
+<script src="assets/js/site.js?v=20261018b"></script>
 </body>
 </html>
